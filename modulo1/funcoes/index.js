@@ -36,98 +36,98 @@
 
 // a).
 
-// function semParametro() {
-//     console.log('Eu sou Davi, tenho 22 anos, moro no rio de janeiro e sou estudante.')
+ function semParametro() {
+     console.log('Eu sou Davi, tenho 22 anos, moro no rio de janeiro e sou estudante.')
 
-// }
+ }
 
-// semParametro()
+ semParametro()
 
 // b).
-// function comParametro(nome, idade, cidade ,profissao) {
-// let frase = `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${profissao}`
-// console.log(frase)
-// return frase
+  function comParametro(nome, idade, cidade ,profissao) {
+  let frase = `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${profissao}`
+  console.log(frase)
+  return frase
 
-// }
+  }
 
-// comParametro("Davi", "22", "rio de janeiro", "estudante")
+  comParametro("Davi", "22", "rio de janeiro", "estudante")
 
-// 2.
+// // 2.
 // a).
 
-// function somaDosNumeros(numero1, numero2) {
-//     let soma = numero1 + numero2
-//     console.log(soma)
-//     return soma
-// }
+ function somaDosNumeros(numero1, numero2) {
+    let soma = numero1 + numero2
+     console.log(soma)
+     return soma
+ }
 
-// somaDosNumeros(2383, 9239)
+ somaDosNumeros(2383, 9239)
 
 // b).
 
-// function booleano(numero3, numero4) {
-//     let maiorOuIgual = numero3 >= numero4
-//     console.log(maiorOuIgual)
-//     return (maiorOuIgual)
-// }
-// booleano(2632, 8723)
+ function booleano(numero3, numero4) {
+     let maiorOuIgual = numero3 >= numero4
+     console.log(maiorOuIgual)
+     return (maiorOuIgual)
+ }
+ booleano(2632, 8723)
 
-// // c).
+ // c).
 
-// function parOuNao(num1) {
-//     let par = (num1 % 2)
-//     console.log(par)
-//     return (par)
+ function parOuNao(num1) {
+    let par = (num1 % 2)
+     console.log(par)
+     return (par)
 
-// }
-// parOuNao(384)
+ }
+ parOuNao(384)
 
 // d).
-// function mensagem(msn) {
+ function mensagem(msn) {
 
-//     let tamanho = msn.length
-//     let maiuscula = msn.toUpperCase()
-//     let resposta = console.log(`${tamanho}, ${maiuscula}`)
-// return resposta
-// }
+     let tamanho = msn.length
+     let maiuscula = msn.toUpperCase()
+     let resposta = console.log(`${tamanho}, ${maiuscula}`)
+ return resposta
+ }
 
-// mensagem(`eu estou aprendendo bastante no curso da labenu.`)
+ mensagem(`eu estou aprendendo bastante no curso da labenu.`)
 
 // exercicio 3.
 // a).
 
-function soma(numeroA, numeroB) {
-    let soma = numeroA + numeroB
- console.log(`soma ${soma}` )
- return (soma)
+ function soma(numeroA, numeroB) {
+     let soma = numeroA + numeroB
+  console.log(`soma ${soma}` )
+  return (soma)
 
-}
+ }
 
- function subtracão(numeroA, numeroB) {
-    let subtracao = numeroA - numeroB
- console.log(`subtracao ${subtracao}`)
-  return subtracao
-}
+  function subtracão(numeroA, numeroB) {
+     let subtracao = numeroA - numeroB
+  console.log(`subtracao ${subtracao}`)
+   return subtracao
+ }
 
- function multiplicaçãoo(numeroA, numeroB) {
- let multiplicacao = (numeroA*numeroB)
- console.log(`multiplicação ${multiplicacao}`)
-return multiplicacao
-}
+  function multiplicaçãoo(numeroA, numeroB) {
+  let multiplicacao = (numeroA*numeroB)
+  console.log(`multiplicação ${multiplicacao}`)
+ return multiplicacao
+ }
 
- function divisão(numeroA, numeroB){
- let divisão = (numeroA/numeroB)
- console.log(`divisão ${divisão}`)
- return divisão
+  function divisão(numeroA, numeroB){
+  let divisão = (numeroA/numeroB)
+  console.log(`divisão ${divisão}`)
+  return divisão
 
-}
-const numeroA = Number(prompt("insira o primeiro numero:"))
-const numeroB = Number(prompt("insira o segundo numero:"))
+ }
+ const numeroA = Number(prompt("insira o primeiro numero:"))
+ const numeroB = Number(prompt("insira o segundo numero:"))
 
-console.log(`numeros inseridos: ${numeroA} e ${numeroB}`)
+ console.log(`numeros inseridos: ${numeroA} e ${numeroB}`)
 
-soma(numeroA, numeroB)
-subtracão(numeroA, numeroB)
-multiplicaçãoo(numeroA, numeroB)
-divisão(numeroA, numeroB)
+ soma(numeroA, numeroB)
+ subtracão(numeroA, numeroB)
+ multiplicaçãoo(numeroA, numeroB)
+ divisão(numeroA, numeroB)
