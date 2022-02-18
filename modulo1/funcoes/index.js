@@ -139,7 +139,7 @@ const funcaoArrow = (variavel) => {
     console.log(variavel)
 }
 
-funcaoArrow("Murilo Terenciani Carolino")
+funcaoArrow("Davi de araujo gomes")
 
 //b)
 const resultadoSoma = (number1, number2) => {
