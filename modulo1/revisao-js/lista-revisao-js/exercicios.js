@@ -31,11 +31,9 @@ return pares
 retornaNumerosPares()
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    const par = x => x  *2 
-    const pares = array.filter(par)
-    return pares    
+   
 }
-retornaNumerosParesElevadosADois()
+
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
   
