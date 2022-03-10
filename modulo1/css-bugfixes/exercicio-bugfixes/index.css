@@ -113,6 +113,21 @@ td button {
     color: black;
     
 }
+td button:hover {
+    background-color: #ffd000;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    
+}td button:active {
+    background-color: #ffffff;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    
+}
 
 .container-do-search {
     margin-top: 20px;
