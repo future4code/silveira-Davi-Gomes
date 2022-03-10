@@ -152,3 +152,10 @@ td button:hover {
 #back-button:hover {
     background-color: #635a3d
 }
+body 
+   {counter-reset: 
+mynum;} 
+p.numbered:before
+  {content: counter(mynum) ": ";
+  counter-increment: mynum;
+  font-weight: bold;}
