@@ -1,0 +1,28 @@
+*{
+ margin: 5px ;
+padding: 5px  ;
+}
+body{
+background-color: rgb(38, 179, 235)
+
+}
+header{
+background-color: rgb(0, 0, 0);
+color: white;
+text-align: center;
+
+}
+
+footer{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+img{
+   width: 25px;
+    
+}
+
