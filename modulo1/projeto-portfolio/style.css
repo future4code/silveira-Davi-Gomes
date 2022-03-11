@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: linear-gradient( to right, rgb(16, 223, 126), rgb(9, 232, 240), rgb(16, 223, 126))
+}
+header{
+    text-align: center;
+}
+button.inicio{
+    background: none;
+    position: relative;
+    right: 280px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+   
+}
+button.portifolio{
+background: none;
+margin: 6px;
+border-top: 5px;
+border-left: 5px;
+border-right: 5px;
+
+}
+button.contatos{
+    background: none;
+    position: relative;
+    left: 280px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+}
+.corpo{
+margin: 10px;
+padding: 10px;
+text-align: center;
+}
+
+.roda-pe{
+    position: relative;
+    text-align: center;
+    
+}
+.titulo{
+    font-style: italic;
+}
+
+.texto-de-baixo{
+    text-align: center;
+}
+img{
+    width: 25px;
+
+}
+.git{
+
+margin: 10px;
+
+}
+p{
+    font-size: 18px;
+}
