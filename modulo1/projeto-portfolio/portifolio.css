@@ -8,6 +8,7 @@ body{
     background-position: center;
     background-size: cover;
 }
+
 header{
     text-align: center;
 }
@@ -41,67 +42,37 @@ margin: 10px;
 padding: 10px;
 text-align: center;
 }
-
-.roda-pe{
-    position: relative;
-    text-align: center;
-    
-}
-.titulo{
-    font-style: italic;
-}
-
-.texto-de-baixo{
-    text-align: center;
-}
-img{
-    width: 25px;
-
-}
-.git{
-
-margin: 10px;
-
-}
-p{
-    font-size: 30px;
-}
-
 .blackjack{
-    width: 100px;
-   position: relative;
-margin-left: 30vw;
-
-}
-
-.loja{
-
-    width: 100px;
+    width: 80px;
     position: relative;
- margin-left: 30vw;
- 
+   margin-left: 46%;
+   padding:30px;
+}
+.loja{
+width: 80px;
+position: relative;
+margin-left: 46%;   
+padding:30px;
+
 }
 
-.projetos{
+.frase-loja{
+    text-align: center;
+}
+
+.frase-blackjack{
+    text-align: center;
+}
+
+.sobre-blackjack{
 text-align: center;
- 
-}
-
-#projeto1{
-
-margin-left: 29vw;
-font-family: Roboto;
 font-size: 20px;
+Color:rgb(255, 255, 255);
 }
 
-#projeto2{
-  
-margin-left: 29vw;
-  font-family: Roboto;
-font-size: 20px;
-}
-
-.inicio, .portifolio, .contatos{
-    cursor: pointer;
+.sobre-loja{
+    text-align: center;
+    font-size: 20px;
+    Color:rgb(255, 255, 255);
 
 }
