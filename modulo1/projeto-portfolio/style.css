@@ -11,16 +11,16 @@ body{
 header{
     text-align: center;
 }
-button.inicio{
+.inicio{
     background: none;
     position: relative;
     right: 280px;
     border-top: 5px;
     border-left: 5px;
     border-right: 5px;
-   
+    
 }
-button.portifolio{
+.portifolio{
 background: none;
 margin: 6px;
 border-top: 5px;
@@ -28,7 +28,7 @@ border-left: 5px;
 border-right: 5px;
 
 }
-button.contatos{
+.contatos{
     background: none;
     position: relative;
     left: 280px;
