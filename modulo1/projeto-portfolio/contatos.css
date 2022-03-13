@@ -21,11 +21,11 @@ button.inicio{
    
 }
 button.portifolio{
-background: none;
-margin: 6px;
-border-top: 5px;
-border-left: 5px;
-border-right: 5px;
+    background: none;
+    margin: 6px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
 
 }
 button.contatos{
@@ -37,7 +37,31 @@ button.contatos{
     border-right: 5px;
 }
 .corpo{
-margin: 10px;
-padding: 10px;
-text-align: center;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.inicio, .portifolio, .contatos{
+    cursor: pointer;
+
+}
+img{
+    width: 140px;
+    margin-left: 48vw;
+    padding-top: 10vw;
+    display:block;
+}
+section{
+    text-align: center;
+    
+}
+.siga{
+    margin-left: 45px;
+    text-decoration: none;
+    color:white;
+}
+.perfil{
+    margin-left: 45px;
+    text-decoration: none;
+    color:white;
 }

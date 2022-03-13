@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    
 }
 body{
     background-image: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?cs=srgb&dl=pexels-roberto-nickson-2775196.jpg&fm=jpg");
@@ -87,18 +88,22 @@ text-align: center;
  
 }
 
-#projeto1{
+.projeto1{
 
 margin-left: 29vw;
-font-family: Roboto;
+font-family: 'Roboto', sans-serif;
 font-size: 20px;
+text-decoration: none;
+color:rgb(255, 255, 255)
 }
 
-#projeto2{
+.projeto2{
   
 margin-left: 29vw;
-  font-family: Roboto;
+font-family: 'Roboto', sans-serif;  
 font-size: 20px;
+text-decoration: none;
+color:rgb(255, 255, 255)
 }
 
 .inicio, .portifolio, .contatos{

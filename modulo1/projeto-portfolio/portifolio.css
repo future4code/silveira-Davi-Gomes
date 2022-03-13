@@ -88,3 +88,7 @@ header{
     margin-left: 8cm;
    
 }
+.inicio, .portifolio, .contatos{
+    cursor: pointer;
+
+}
