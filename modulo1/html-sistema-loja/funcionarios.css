@@ -1,0 +1,21 @@
+*{
+    margin: 5px ;
+   padding: 5px  ;
+}
+
+h1{
+
+    background-color: rgb(0, 0, 0);
+color: white;
+text-align: center;
+
+}
+header{
+    background-color: rgb(0, 0, 0);
+color: white;
+text-align: center;
+}
+body{
+    background-color: rgb(38, 179, 235)
+
+}
