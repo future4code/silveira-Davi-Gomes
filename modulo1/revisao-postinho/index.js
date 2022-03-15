@@ -39,33 +39,7 @@ console.log(verificaSeEMaior(321, 2156));
 
 // Exercício 3------------------------------------------------------------------------------------
 
-// const cadastro = () => {
-//     const usuario = []
-// //  Sua lógica aqui
-// const nomeDoUsuario = prompt("Qual o seu nome?");
-// const anoDeNascimento = Number(prompt("Qual o ano do seu nascimento?"));
-// const senhaDoUsuario = prompt("Digite a sua senha:");
-// const nacionalidade = prompt("Qual a sua nascionalidade?");
-// const idade = 2022 - anoDeNascimento
-// if(idade < 18){
-//     return "erro no cadastro, usuario e menor de idade."
-// }
-// if(senhaDoUsuario.length < 6){
-// return "erro no cadastro, sua senha precisa conter 6 caracteres."
-// }
-// if(nacionalidade !== "brasileira" ){
-// return "erro no cadastro"
-// }
-// const pessoa = {
-// nomeDoUsuario:nomeDoUsuario,
-// anoDeNascimento:anoDeNascimento,
-// senhaDoUsuario:senhaDoUsuario,
-// nascionalidade:nacionalidade,
-// }
-// usuario.push(pessoa)
-// return usuario
-// } 
-// console.log(cadastro());
+// +
 
 // Exercício 4-----------------------------------------------------------------------------------------------
 
@@ -93,13 +67,23 @@ console.log(login());
 const primeiraDose = () => {
 
     //  Sua lógica aqui
-const nomeUsuario = prompt("Qual o seu nome?")
-let vacina = prompt("Qual o nome da vacina que vc tomou?")
-let tempo = ""
+const nomeUsuario = prompt("Qual o seu nome?");
+const vacina = prompt("Qual o nome da vacina que vc tomou?");
+const coronavac = 28;
+const astrazenica = 90;
+const pfizer = 90;
+let tempo =""
 let data = ""
-if(vacina){
-    
+
+if(vacina === "coronavac"){
+    return `Olá ${nomeUsuario}! A próxima dose da ${vacina} é daqui a ${coronavac} dias. Compareça no posto na data 12/04/2020.`
 }
+
+if(vacina === "astrazenica"){
+    return `Olá ${nomeUsuario}! A próxima dose da ${vacina} é daqui a ${astrazenica} dias. Compareça no posto na data 13/06/2022.` 
+}
+if(vacina === "pfizer")
+return `Olá ${nomeUsuario}! A próxima dose da ${vacina} é daqui a ${pfizer} dias. Compareça no posto na data 13/06/2022.` 
 }
 
 
@@ -119,8 +103,13 @@ const segundaDose = (nomeDoUsuario) => {
         { nome: "Carlos", imunizacao: "incompleta" }
     ]
 
-    //  Sua lógica aqui
-
+    for(let pessoa of usuarios){
+        if(pessoa.nome === nomeDoUsuario){
+            pessoa.imunizacao = "completa"
+        }
+    }
+    
+return usuarios
 
 }
 console.log(segundaDose("Barbara"));
@@ -133,9 +122,7 @@ const avisoAosAtrasados = () => {
         { nome: "Barbara", imunizacao: "completa" },
         { nome: "Carlos", imunizacao: "incompleta" }
     ]
-
-    //  Sua lógica aqui
-
+if(){}
 }
 console.log(avisoAosAtrasados());
 
