@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?cs=srgb&dl=pexels-roberto-nickson-2775196.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    text-align: center;
+}
+.inicio{
+    background: none;
+    position: relative;
+    right: 280px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+  
+  
+}
+.portifolio{
+    background: none;
+    margin: 6px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+
+}
+.contatos{
+    background: none;
+    position: relative;
+    left: 280px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    
+}
+.corpo{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.blackjack{
+    width: 80px;
+    position: relative;
+    margin-left: 46%;
+    padding:30px;
+}
+.loja{
+    width: 80px;
+    position: relative;
+    margin-left: 46%;   
+    padding:30px;
+
+}
+
+.frase-loja{
+    text-align: center;
+}
+
+.frase-blackjack{
+    text-align: center;
+}
+
+.sobre-blackjack{
+    text-align: center;
+    font-size: 20px;
+    Color:rgb(255, 255, 255);
+}
+
+.sobre-loja{
+    text-align: center;
+    font-size: 20px;
+    Color:rgb(255, 255, 255);
+
+}
+.pagina-blackjack{
+    width: 70vw;
+    margin-left: 8cm;
+}   
+
+.pagina-loja{
+    width: 70vw;
+    margin-left: 8cm;
+   
+}
+.inicio, .portifolio, .contatos{
+    cursor: pointer;
+
+}

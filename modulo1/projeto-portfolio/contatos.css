@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?cs=srgb&dl=pexels-roberto-nickson-2775196.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    text-align: center;
+}
+button.inicio{
+    background: none;
+    position: relative;
+    right: 280px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+   
+}
+button.portifolio{
+    background: none;
+    margin: 6px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+
+}
+button.contatos{
+    background: none;
+    position: relative;
+    left: 280px;
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+}
+.corpo{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.inicio, .portifolio, .contatos{
+    cursor: pointer;
+
+}
+img{
+    width: 140px;
+    margin-left: 48vw;
+    padding-top: 10vw;
+    display:block;
+}
+section{
+    text-align: center;
+    
+}
+.siga{
+    margin-left: 45px;
+    text-decoration: none;
+    color:white;
+    font-family: fantasy;
+    font-size: 20px;
+}
+
+.perfil{
+    margin-left: 45px;
+    text-decoration: none;
+    color:white;
+    font-family: fantasy;
+    font-size: 20px;
+}
