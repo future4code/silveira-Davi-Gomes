@@ -9,7 +9,7 @@ const TarefaList = styled.ul`
 
 const Tarefa = styled.li`
   text-align: left;
-  text-decoration: ${({completa}) => (completa ? 'line-through' : 'none')};
+  text-decoration: ${({ completa }) => (completa ? 'line-through' : 'none')};
 `
 
 const InputsContainer = styled.div`
@@ -19,25 +19,25 @@ const InputsContainer = styled.div`
 `
 
 class App extends React.Component {
-    state = {
-      tarefas: [
-        {
-          id: Date.now(), 
-          texto: 'jogar valorante',
-          completa: false 
-        },
-        {
-          id: Date.now(), 
-          texto: 'fazer os trabalhos',
-          completa: true 
-        } 
-      ],
-      inputValue: '',
-      filtro: ''
-    }
+  state = {
+    tarefas: [
+      {
+        id: Date.now(),
+        texto: 'jogar valorante',
+        completa: false
+      },
+      {
+        id: Date.now(),
+        texto: 'fazer os trabalhos',
+        completa: true
+      }
+    ],
+    inputValue: '',
+    filtro: ''
+  }
 
   componentDidUpdate() {
- 
+
   };
 
   componentDidMount() {
@@ -45,19 +45,19 @@ class App extends React.Component {
   };
 
   onChangeInput = (event) => {
-    this.setState({inputValue: event.target.value})
+    this.setState({ inputValue: event.target.value })
   }
 
   criaTarefa = () => {
     const novaTarefaRenderizada = {
-      id: Date.now(), 
-      texto:this.state.inputValue,
-      completa: false 
+      id: Date.now(),
+      texto: this.state.inputValue,
+      completa: false
     }
     const copiaListaDeTarefas = [...this.state.tarefas, novaTarefaRenderizada]
 
     this.setState({ tarefas: copiaListaDeTarefas })
-  
+
   }
 
   selectTarefa = (id) => {
@@ -72,7 +72,7 @@ class App extends React.Component {
         return lista
       }
     })
-    this.setState({ tarefas: novaListaDeTarefas }) 
+    this.setState({ tarefas: novaListaDeTarefas })
   }
 
   onChangeFilter = (event) => {
@@ -95,10 +95,10 @@ class App extends React.Component {
       <div className="App">
         <h1>Lista de tarefas</h1>
         <InputsContainer>
-          <input value={this.state.inputValue} onChange={this.onChangeInput}/>
+          <input value={this.state.inputValue} onChange={this.onChangeInput} />
           <button onClick={this.criaTarefa}>Adicionar</button>
         </InputsContainer>
-        <br/>
+        <br />
 
         <InputsContainer>
           <label>Filtro</label>
