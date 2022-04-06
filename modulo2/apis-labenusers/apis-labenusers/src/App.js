@@ -2,34 +2,34 @@ import React from "react"
 import Cadastro from "./components/Cadastro"
 import ListaUsuarios from "./components/ListaUsuarios"
 
-export default class App extends React.Component{
+export default class App extends React.Component {
   state = {
-  telaAtual: "cadastro"
+    telaAtual: "cadastro"
   }
-  
+
   escolheTela = () => {
-    switch(this.state.telaAtual){
+    switch (this.state.telaAtual) {
       case "cadastro":
-      return <Cadastro irParaLista = {this.irParaLista}/>
+        return <Cadastro irParaLista={this.irParaLista} />
       case "lista":
-      return <ListaUsuarios irParaCadastro = {this.irParaCadastro}/>
+        return <ListaUsuarios irParaCadastro={this.irParaCadastro} />
       default:
         return <div>Erro! pagina não encontrada</div>
     }
   }
-  
+
   irParaCadastro = () => {
-this.setState({telaAtual:"cadastro"})
+    this.setState({ telaAtual: "cadastro" })
   }
 
   irParaLista = () => {
-this.setState({telaAtual: "lista"})
+    this.setState({ telaAtual: "lista" })
   }
 
-  render(){
+  render() {
     return (
       <div>
-      {this.escolheTela()}
+        {this.escolheTela()}
       </div>
     )
   }
