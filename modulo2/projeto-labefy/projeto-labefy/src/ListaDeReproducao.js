@@ -29,7 +29,7 @@ background-color: black ;
 export default class ListaDeReproducao extends React.Component {
     state = {
         playlists: [],
-        
+
     }
     componentDidMount() {
         this.verPlaylist()
@@ -89,7 +89,7 @@ export default class ListaDeReproducao extends React.Component {
             <div>
                 <div>
                     <div>
-                        
+
                         <h2>lista de reprodução</h2>
                         <button onClick={this.props.irParaHome}>ir para pagina home </button>
                         {listaDePlaylists}

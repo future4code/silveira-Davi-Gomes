@@ -1,51 +1,108 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-const headers ={
+const headers = {
     headers: {
-            Authorization: "davi-araujo-silveira"
-            
-        }
+        Authorization: "davi-araujo-silveira"
+
+    }
 }
 
 export default class DetalhesPlaylist extends React.Component {
-  state = {
-      detalhes:[]
-  }
-  componentDidMount(){
-      this.detalhesDaPlaylist()
-  }
-  detalhesDaPlaylist = ()=> {
-    const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.idPlaylist}/tracks`
-    axios.get(url, headers)
-        
-    .then((res)=>{
-        console.log(res.data)
-        this.setState({ detalhes: res.data.result.tracks })
+    state = {
+        nomeMusica: "",
+        artista: "",
+        url: "",
+        detalhes: []
+    }
+    componentDidMount() {
+        this.detalhesDaPlaylist()
+    }
+    onChangeNomeMusica = (event) => {
+        this.setState({ nomeMusica: event.target.value })
+    }
+    onChangeArtista = (event) => {
+        this.setState({ artista: event.target.value })
+    }
+    onChangeUrl = (event) => {
+        this.setState({ url: event.target.value })
+    }
+    addMusicas = () => {
+        const body = {
+            name: this.state.nomeMusica,
+            artist: this.state.artista,
+            url: this.state.url
+        }
 
-    })
-    .catch((err)=>{
-console.log("errooooooo!!!")
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.idPlayList}/tracks`
 
-    })
- }
+        axios.post(url, body, headers)
+            .then((res) => {
 
-  
+                this.buscarInformacao()
+                this.setState({ nomeMusica: "", artista: "", url: "" })
+                console.log(res.data);
+            })
+            .catch((err) => {
+
+
+            })
+    }
+
+
+    detalhesDaPlaylist = () => {
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.idPlayList}/tracks`
+        axios.get(url, headers)
+
+            .then((res) => {
+                console.log(res.data)
+                this.setState({ detalhes: res.data.result.tracks })
+
+            })
+            .catch((err) => {
+                console.log("errooooooo!!!")
+
+            })
+    }
+
+
     render() {
-        const detalhesPlaylist = this.state.detalhes.map((informa) =>{
-            return(
+        const detalhesPlaylist = this.state.detalhes.map((informa) => {
+            return (
                 <div key={informa.id}>
-                <li>{informa.name}</li>
+                    <li>{informa.name}</li>
+                    <li>{informa.name} </li>
+                    <audio width="300" height="32" controls="controls" src={informa.url} type="audio/mp3"></audio>
+
                 </div>
             )
         })
-    
-    
+
+
         return (
-      <div>
-          Detalhes da Playlist
-            {detalhesPlaylist}
-      </div>
-    )
-  }
+            <div>
+                <button onClick={this.props.irParaHome}>Ir para home </button>
+                <h2>Musicas</h2>
+                <input
+                    placeholder="Nome da música"
+                    value={this.state.nomeMusica}
+                    onChange={this.onChangeNomeMusica}
+                />
+                <input
+                    placeholder="Nome do artista"
+                    value={this.state.artista}
+                    onChange={this.onChangeArtista}
+                />
+                <input
+                    placeholder="Link da música"
+                    value={this.state.url}
+                    onChange={this.onChangeUrl}
+                />
+                <button onClick={this.addMusicas}>Adicionar</button>
+                <h2>Detalhes da Playlist</h2>
+
+                {detalhesPlaylist}
+            </div>
+        )
+    }
 }
