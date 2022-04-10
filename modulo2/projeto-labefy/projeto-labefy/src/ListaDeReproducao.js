@@ -24,7 +24,16 @@ color: aqua;
 background-color: black ;
 }
 `
+const Div = styled.div`
+background-color: #111111;
+height: 100vh;
+display: flex;
+margin: -8px;
+justify-content: space-around
+`
+const BotaoHome = styled.div`
 
+`
 
 export default class ListaDeReproducao extends React.Component {
     state = {
@@ -86,7 +95,7 @@ export default class ListaDeReproducao extends React.Component {
 
 
         return (
-            <div>
+            <Div>
                 <div>
                     <div>
 
@@ -95,7 +104,7 @@ export default class ListaDeReproducao extends React.Component {
                         {listaDePlaylists}
                     </div >
                 </div>
-            </div>
+            </Div>
         )
     }
 }
