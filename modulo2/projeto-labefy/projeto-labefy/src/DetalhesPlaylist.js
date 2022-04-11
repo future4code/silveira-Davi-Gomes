@@ -1,5 +1,23 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+
+const Div = styled.div`
+color:#0DF171;
+
+`
+const ContainerInputs = styled.div`
+color:#0DF171;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+button{
+    cursor: pointer;
+}
+
+`
 
 const headers = {
     headers: {
@@ -69,32 +87,33 @@ export default class DetalhesPlaylist extends React.Component {
     render() {
         const detalhesPlaylist = this.state.detalhes.map((informa) => {
             return (
-                <div key={informa.id}>
-                    <li>{informa.name}</li>
-                    <li>{informa.name} </li>
+                <Div key={informa.id}>
+                    <li>Nome da Musica:{informa.name}</li>
+                    <li>Artista:{informa.artist} </li>
                     <audio width="300" height="32" controls="controls" src={informa.url} type="audio/mp3"></audio>
 
-                </div>
+                </Div>
             )
         })
 
 
         return (
-            <div>
+            <ContainerInputs>
+
                 <button onClick={this.props.irParaHome}>Ir para home </button>
                 <h2>Musicas</h2>
                 <input
-                    placeholder="Nome da música"
+                    placeholder={"Nome da música"}
                     value={this.state.nomeMusica}
                     onChange={this.onChangeNomeMusica}
                 />
                 <input
-                    placeholder="Nome do artista"
+                    placeholder={"Nome do artista"}
                     value={this.state.artista}
                     onChange={this.onChangeArtista}
                 />
                 <input
-                    placeholder="Link da música"
+                    placeholder={"Link da música"}
                     value={this.state.url}
                     onChange={this.onChangeUrl}
                 />
@@ -102,7 +121,7 @@ export default class DetalhesPlaylist extends React.Component {
                 <h2>Detalhes da Playlist</h2>
 
                 {detalhesPlaylist}
-            </div>
+            </ContainerInputs>
         )
     }
 }

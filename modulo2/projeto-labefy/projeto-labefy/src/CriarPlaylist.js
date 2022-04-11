@@ -18,15 +18,14 @@ const ContainerHome = styled.div`
 
 `
 const Div = styled.div`
-    display: auto;
-    margin: -8px;
-    background-color:#111111;
+    
     display: grid;
     justify-content:center;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     background-size: cover;
+    
 `
 
 
@@ -38,7 +37,6 @@ img{
     margin:18px;
 
 }
-background-color:#111111;
     margin: -8px;
     color:#0DF171;
     display: grid;
@@ -80,26 +78,16 @@ export default class CriarPlaylist extends React.Component {
     }
 
     render() {
-        
-        return (
-           <div>
-            
-            
 
+        return (
+            <div>
                 <LogoLabefy>
                     <img src={Logo}></img>
                     <h1>labe-fy</h1>
                 </LogoLabefy>
-
-
                 <Div>
-
-
                     <ContainerHome>
-
-
                         <h3>Veja as suas playlists</h3>
-
                         <button onClick={this.props.irParaListaPlaylist}>lista de playlist</button>
                         <p>Digite o Nome da Playlist</p>
                         <button onClick={this.criarPlaylist}>criar playlist</button>
@@ -110,8 +98,7 @@ export default class CriarPlaylist extends React.Component {
                         />
                     </ContainerHome>
                 </Div>
-            
-</div>
+            </div>
         )
     }
 }

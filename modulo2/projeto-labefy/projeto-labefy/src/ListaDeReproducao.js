@@ -4,36 +4,54 @@ import styled from 'styled-components'
 
 const ContainerPlaylist = styled.div`
     border-radius:30px;
-    
-    border: 1px solid black;
+    color:#0DF171;
+    border: 1px solid #0DF171;
     padding: 10px;
     margin: 10px;
     display: flex;
     width: 400px;
     align-items: center;
     justify-content: space-between;
-    
+
+    button{
+    .myButton {
+	box-shadow: 0px 0px 0px 2px #3dc21b;
+	border-radius:20px;
+	display:inline-block;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+
+}
     .myButton:active {
-	position:relative;
+    position:relative;
 	top:1px;
 }
-
-
-&:hover{
-color: aqua;
-background-color: black ;
+    
+    &:hover{
+    cursor:pointer; 
 }
+
+    }
+
 `
 const Div = styled.div`
-background-color: #111111;
-height: 100vh;
 display: flex;
-margin: -8px;
 justify-content: space-around
-`
-const BotaoHome = styled.div`
+
 
 `
+const ContainerH2 = styled.div`
+h2{
+    color:#0DF171;
+
+}
+button{
+    cursor: pointer; 
+}
+`
+
 
 export default class ListaDeReproducao extends React.Component {
     state = {
@@ -89,6 +107,7 @@ export default class ListaDeReproducao extends React.Component {
                     {user.name}
                     <button onClick={() => this.props.detalhesPlaylist(user.id)}>detalhes da playlists</button>
                     <button onClick={() => this.deletarPlaylist(user.id)}>X</button>
+
                 </ContainerPlaylist>
             </div>
         })
@@ -97,12 +116,13 @@ export default class ListaDeReproducao extends React.Component {
         return (
             <Div>
                 <div>
-                    <div>
+                    <ContainerH2>
 
                         <h2>lista de reprodução</h2>
                         <button onClick={this.props.irParaHome}>ir para pagina home </button>
                         {listaDePlaylists}
-                    </div >
+
+                    </ContainerH2>
                 </div>
             </Div>
         )
