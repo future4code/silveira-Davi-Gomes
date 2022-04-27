@@ -18,7 +18,6 @@ const ContainerHome = styled.div`
     display: flex;
     flex-direction: row;
     height: 100vh;
-    /* justify-content: flex-end; */
     justify-content: space-around;
     margin-right: 25px;
     align-items: center;
