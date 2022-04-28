@@ -1,10 +1,14 @@
-.card {
-    width: 190px;
-    height: 254px;
+/* .card { */
+    /* list-style-image: url('../img/foguete.png'); */
+    /* list-style-type:none;
+    width: 90vh;
+    height: auto;
     border-radius: 20px;
     padding: 5px;
+    padding-bottom:25px ;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    text-align: center;
 }
 
 .card__content {
@@ -14,9 +18,9 @@
     height: 100%;
 }
 button {
-    display: flex;
+    display: flex; */
     /* transform: rotate(-25deg) skew(25deg); */
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d;
     position: relative;
     list-style: none;
     width: 100px;
@@ -114,4 +118,4 @@ button {
    
    button:nth-child(1):hover span {
     background: #52E19F;
-   }
+   } */
