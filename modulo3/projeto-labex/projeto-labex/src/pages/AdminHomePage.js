@@ -17,7 +17,7 @@ function AdminHomePage() {
     navigate("/admin/trip/create")
   }
   const goTripsDetailsPage= (id) => {
-    navigate(`/tripdetailspage/${id}`)
+    navigate(`/admin/trips/${id}`)
   }
   const [trips, setTrips] = useState([])
   useProtectedPage()
@@ -78,7 +78,7 @@ function AdminHomePage() {
         <span>criar viagem</span>
       </button>
       <li>
-        {tripsList}
+        {trips && tripsList}
       </li>
     </div>
   )

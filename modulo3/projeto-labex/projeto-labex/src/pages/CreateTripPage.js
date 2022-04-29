@@ -54,6 +54,7 @@ export default function CreateTripPage() {
                 alert("viagem criada!!!")
 
             }).catch((err) => {
+                
                 alert("ocorreu um erro!!!")
 
             })
@@ -65,11 +66,10 @@ export default function CreateTripPage() {
     
     return (
         <GlobalStyles>
-            <form onSubmit={create}>
-
-                <button onClick={goHomePage}>
+           <button onClick={goHomePage}>
                     Home
-                </button>
+                </button>  
+                <form onSubmit={create}>
                 <h1>Sala de comando</h1>
                 <div>
                     <input
@@ -92,14 +92,13 @@ export default function CreateTripPage() {
                     <input
                         name={"date"}
                         placeholder="Data"
-                        type="date"
+                        type={"date"}
                         value={form.date}
                         onChange={onChange}
                     />
                     <input
                         name={"description"}
                         placeholder="Descrição"
-                        type="date"
                         value={form.description}
                         onChange={onChange}
                     />

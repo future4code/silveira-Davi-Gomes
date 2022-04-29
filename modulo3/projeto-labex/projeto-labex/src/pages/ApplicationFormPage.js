@@ -41,7 +41,7 @@ function ApplicationFormPage() {
     })
 const cadastrar = (event) =>{
     event.preventDefault()
-    applyToTrips()
+    applyToTrips(form.idViagem)
     cleanFields()
 }
 const [trips, setTrips] = useState([]) 
@@ -54,9 +54,10 @@ const applyToTrips =(id) =>{
         "profession":form.profession,
         "country":form.country,
     }
-    axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/trips/${id}/apply`,body)
+    axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/davi-gomes-silveira/trips/${id}/apply`,body)
 .then((response)=>{
-alert("cadastrado com sucesso!")
+
+    alert("cadastrado com sucesso!")
 }).catch(()=>{
     alert("ocorreu um erro, por favor tente novamente")
 })
@@ -66,6 +67,7 @@ useEffect(()=>{
     const token = localStorage.getItem("token")
     axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/davi-gomes-silveira/trips")
 .then((response)=>{
+    
 setTrips(response.data.trips)
 })
 .catch((erro)=>{
@@ -74,7 +76,8 @@ alert("ocorreu um erro, por favor tente novamente!")
 },[])
 
 const getTrips = trips.map((list)=>{
-return (
+
+    return (
     <option key={list.id} value={list.id}>{list.name}</option>
 )
 })
