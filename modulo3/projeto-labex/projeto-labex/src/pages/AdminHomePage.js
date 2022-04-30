@@ -2,8 +2,15 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useProtectedPage from '../Hooks/useProtectedPage'
+import styled from 'styled-components'
 
 
+const Lista= styled.div`
+a{
+color: white;
+}
+
+`
 
 
 function AdminHomePage() {
@@ -12,6 +19,9 @@ function AdminHomePage() {
   const irParaHome = () => {
     navigate("/")
 
+  }
+  const irParaLogin = () => {
+    navigate("/login")
   }
   const goCreateTripPage = () => {
     navigate("/admin/trip/create")
@@ -29,6 +39,10 @@ function AdminHomePage() {
         alert("Ocorreu um erro!!!")
       })
   }, [])
+  const logout = () =>{
+    localStorage.removeItem("token")
+    irParaLogin(navigate)
+  }
   const deletarViagem = (id) => {
     const token = localStorage.getItem("token")
     axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/davi-gomes-silveira/trips/${id}`,
@@ -47,39 +61,30 @@ function AdminHomePage() {
   }
   const tripsList = trips.map((list) => {
     return (
-      <div>
-        <button onClick={() => goTripsDetailsPage (list.id)}>{list.name}
-          
+      <Lista>
+        <a onClick={() => goTripsDetailsPage (list.id)}>{list.name}</a>
+        <div>
+          <button onClick={() => deletarViagem(list.id)}>
+          Apagar
         </button>
-        <button onClick={() => deletarViagem(list.id)}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span>Apagar</span>
-        </button>
-      </div>
+        </div>
+      </Lista>
     )
   })
   return (
     <div>
+      <button onClick={logout}>logout</button>
       <button onClick={irParaHome}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span>Home</span>
+        Home
       </button>
       <button onClick={goCreateTripPage}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span>criar viagem</span>
+       criar viagem
       </button>
-      <li>
+      
         {trips && tripsList}
-      </li>
+      
+        
+      
     </div>
   )
 }

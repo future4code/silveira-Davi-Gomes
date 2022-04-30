@@ -5,51 +5,6 @@ import './css/ListTripsPage.css'
 import axios from 'axios'
 import useProtectedPage from '../Hooks/useProtectedPage'
 
-const GlobalStyles = styled.div`
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    flex-direction: column;  
-    color: white;
-`
-const Titulo = styled.div`
-display: flex;
-justify-content:space-around;
-`
-const BotaoCriar = styled.div`
-display: flex;
-align-items: center;
-flex-direction: column;
-height: 8vh;
-
-button{
-margin-right:25px;
-margin-left: 25px;
-height: 6vh;
-width: 15vh;
-}
-
-`
-const Card = styled.div`
-display: flex;
-justify-content: space-around;
-
-
-`
-const ButtonHome = styled.div`
-display: flex;
-justify-content: flex-end;
-margin-top:55px ;
-margin-right: 55px;
-`
-const Button = styled.div`
-display: flex;
-justify-content: flex-end;
-height: 25vh;
-`
 
 function ListTripsPage() {
     useProtectedPage()
@@ -77,7 +32,7 @@ function ListTripsPage() {
 
     const listTrips = trips.map((list) => {
         return (
-            <div key={trips.id}>
+            <div className="CardGrande" key={trips.id}>
                 <p>Nome: {list.name}</p>
                 <p>Descrição:{list.description}</p>
                 <p>Planeta:{list.planet}</p>
@@ -87,25 +42,21 @@ function ListTripsPage() {
         )
     })
     return (
-        <GlobalStyles>
+        <div className="GlobalStyles">
             <div>
-                <ButtonHome className="Button" >
+                <div className="ButtonHome" >
                     <button onClick={irParaHome}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span>Home</span>
+                        Home
                     </button>
-                </ButtonHome>
+                </div>
 
                 <div>
-                    <Titulo>
+                    <div className="Titulo">
                         <h1>Embarque nas nossas Viagens </h1>
-                    </Titulo>
+                    </div>
                 </div>
-                <BotaoCriar>
-                    <Button>
+                <div className="BotaoCriar">
+                    
                         <button onClick={ApplicationFormPage}>
                             <span></span>
                             <span></span>
@@ -113,19 +64,18 @@ function ListTripsPage() {
                             <span></span>
                             <span>Inscrever-se</span>
                         </button>
-                    </Button>
-                </BotaoCriar>
-                <Card>
+                    
+                </div>
+                <div className="Card">
+                    
                     <div class="card">
                         <div class="card__content">
-                            <li>
                                 {listTrips}
-                            </li>
                         </div>
                     </div>
-                </Card>
+                </div>
             </div>
-        </GlobalStyles>
+        </div>
 
     )
 }

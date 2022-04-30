@@ -24,15 +24,6 @@ margin-right: 55px;
 const ButtonLogin = styled.div`
 
 `
-// const ContainerInput = styled.div`
-// display: flex;
-// justify-content: center;
-// margin: 20vh;
-// input{
-//   margin:10px ;
-//   border-radius:20px;
-// }
-// `
 
 function LoginPage() {
   const navigate = useNavigate()
@@ -80,11 +71,7 @@ function LoginPage() {
       
         <ButtonHome classNameName="Button" >
           <button onClick={irParaHome}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span>Home</span>
+            Home
           </button>
         </ButtonHome>
         <div/>
@@ -105,11 +92,7 @@ function LoginPage() {
          
           <ButtonLogin>
          <button onClick={login}>
-         <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span>login</span>
+            login
          </button>
           </ButtonLogin>
         </div>

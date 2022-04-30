@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useState, useEffect }from 'react'
 import { useParams,useNavigate } from 'react-router-dom'
 import useProtectedPage from '../Hooks/useProtectedPage'
+import './css/TripDetailsPage.css'
+
 
 
 
@@ -71,7 +73,7 @@ export default function TripDetailsPage() {
         console.log(list)
         return (
 
-            <div>
+            <div className="CardGrande2">
 
                 <p>Nome:{list.name}</p>
                 <p>Idade:{list.age}</p>
@@ -85,18 +87,24 @@ export default function TripDetailsPage() {
     })
 
     return (
-        <div>
+        <div className="GlobalStylhes1">
+           <div className="ButtonHomeDetalhes">
             <button onClick={goHomePage}>Home</button>
-            <div>
+            </div>
+            <div className="TituloDetalhes">
                 Nome: {trip.name}
                 Data: {trip.data}
                 planeta:{trip.planet}
                 Descrição: {trip.description}
                 Duração em dias: {trip.durationInDays}
             </div>
-            <div>
-                {approvedCandidates}
+            <div className='card10'>
+                <div className='card__content10'>
+                <div className="CardGrande2">
+                <p>aprovados:</p>
+                {approvedCandidates}</div>
                 { listaCandidatos}
+            </div>
             </div>
         </div>
     )
