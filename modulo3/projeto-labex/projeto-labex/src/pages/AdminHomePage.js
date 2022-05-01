@@ -78,7 +78,7 @@ function AdminHomePage() {
         Home
       </button>
       <button onClick={goCreateTripPage}>
-       criar viagem
+      criar viagem
       </button>
       
         {trips && tripsList}
