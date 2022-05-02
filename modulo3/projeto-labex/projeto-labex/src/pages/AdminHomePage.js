@@ -92,32 +92,32 @@ function AdminHomePage() {
   }
   const tripsList = trips.map((list) => {
     return (
-        <DivMeio>
+      <DivMeio>
         <Lista>
-            <a onClick={() => goTripsDetailsPage(list.id)}>{list.name}</a>
-            <button onClick={() => deletarViagem(list.id)}>
-              Apagar
-            </button>
+          <a onClick={() => goTripsDetailsPage(list.id)}>{list.name}</a>
+          <button onClick={() => deletarViagem(list.id)}>
+            Apagar
+          </button>
         </Lista>
-        </DivMeio>
+      </DivMeio>
     )
   })
   return (
     <div>
-    <Header>
-      <button onClick={logout}>logout</button>
-      <button onClick={irParaHome}>
-        Home
-      </button>
-      <button onClick={goCreateTripPage}>
-        criar viagem
-      </button>
+      <Header>
+        <button onClick={logout}>logout</button>
+        <button onClick={irParaHome}>
+          Home
+        </button>
+        <button onClick={goCreateTripPage}>
+          criar viagem
+        </button>
       </Header>
-     <TextoCard>
+      <TextoCard>
         {trips && tripsList}
-     </TextoCard>
-     
-      </div>
+      </TextoCard>
+
+    </div>
   )
 }
 

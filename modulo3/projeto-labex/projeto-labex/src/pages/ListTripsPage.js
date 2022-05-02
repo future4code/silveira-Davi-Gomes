@@ -55,21 +55,21 @@ function ListTripsPage() {
                     </div>
                 </div>
                 <div className="BotaoCriar">
-                    
-                        <button onClick={ApplicationFormPage}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span>Inscrever-se</span>
-                        </button>
-                    
+
+                    <button onClick={ApplicationFormPage}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>Inscrever-se</span>
+                    </button>
+
                 </div>
                 <div className="Card">
-                    
+
                     <div class="card">
                         <div class="card__content">
-                                {listTrips}
+                            {listTrips}
                         </div>
                     </div>
                 </div>

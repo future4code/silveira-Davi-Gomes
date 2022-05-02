@@ -106,23 +106,23 @@ function TripDetailsPage() {
     return (
         <div>
             <Header>
-            <button onClick={goHomePage}>Home</button>
+                <button onClick={goHomePage}>Home</button>
             </Header>
             <div className="GlobalStylhes1">
-                
+
                 <div className="TituloDetalhes">
                     Nome: {trip.name}
-                    <br/>
+                    <br />
                     Data: {trip.date}
-                    <br/>
+                    <br />
                     planeta: {trip.planet}
-                    <br/>
-                    Descrição: 
-                    <br/>
+                    <br />
+                    Descrição:
+                    <br />
                     {trip.description}
-                    <br/>
-                    Duração em dias: 
-                    <br/>
+                    <br />
+                    Duração em dias:
+                    <br />
                     {trip.durationInDays}
                 </div>
                 <div className='card10'>

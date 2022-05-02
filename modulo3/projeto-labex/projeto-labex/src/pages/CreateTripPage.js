@@ -40,8 +40,7 @@ const SalaDeComando = styled.div`
 text-align:center;
 
 `
-
- function CreateTripPage() {
+function CreateTripPage() {
     useProtectedPage()
     const navigate = useNavigate()
 
@@ -76,27 +75,27 @@ text-align:center;
                 alert("viagem criada!!!")
 
             }).catch((err) => {
-                
+
                 alert("ocorreu um erro!!!")
 
             })
-        
-     }   
-            const getPlanet = Planets.map((planets) => {
-            return <option key={planets} value={planets}>{planets}</option>
-        })
-    
+
+    }
+    const getPlanet = Planets.map((planets) => {
+        return <option key={planets} value={planets}>{planets}</option>
+    })
+
     return (
         <GlobalStyles>
-                <Header>
-                    <button onClick={goHomePage}>
+            <Header>
+                <button onClick={goHomePage}>
                     Home
-                </button> 
-                </Header>
-                
-                <form onSubmit={create}>
+                </button>
+            </Header>
+
+            <form onSubmit={create}>
                 <SalaDeComando>
-                    <h1>Sala de comando</h1>  
+                    <h1>Sala de comando</h1>
                 </SalaDeComando>
                 <Inputs>
                     <input
@@ -137,10 +136,10 @@ text-align:center;
                     />
                 </Inputs>
                 <BotaoCriar>
-                    <button>Criar</button> 
+                    <button>Criar</button>
                 </BotaoCriar>
-                
-                
+
+
             </form>
         </GlobalStyles >
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import MyImg from './img/dog.gif'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const GlobalStyles = styled.div`
@@ -86,8 +86,8 @@ function HomePage() {
     return (
         <GlobalStyles>
             <Header>
-                <h2>Labe <span >X</span></h2> 
-                </Header>
+                <h2>Labe <span >X</span></h2>
+            </Header>
             <ContainerHome>
                 <DivMeio>
                     <img src={MyImg}></img>
@@ -95,13 +95,13 @@ function HomePage() {
                 </DivMeio>
             </ContainerHome>
             <Botoes>
-                    <button onClick={irParaLogin}>
-                        Login
-                        </button> 
-                        <button onClick={irParaViagem}>
-                        Viagens
-                        </button>   
-                </Botoes>
+                <button onClick={irParaLogin}>
+                    Login
+                </button>
+                <button onClick={irParaViagem}>
+                    Viagens
+                </button>
+            </Botoes>
         </GlobalStyles>
     )
 }
