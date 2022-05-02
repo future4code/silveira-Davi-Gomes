@@ -67,7 +67,7 @@ function ListTripsPage() {
                 </div>
                 <div className="Card">
 
-                    <div class="card">
+                    <div class="card2">
                         <div class="card__content">
                             {listTrips}
                         </div>

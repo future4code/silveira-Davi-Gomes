@@ -8,7 +8,7 @@
     flex-direction: column;  
     color: white;
 }
-.card {
+.card2 {
      
     list-style-type:none;
     width: 90vh;
@@ -26,7 +26,7 @@
     background: rgb(5, 6, 45);
     border-radius: 17px;
     gap: 20px;
-    padding: 25px;
+    padding: 5px;
     justify-content: center;
     
 }
