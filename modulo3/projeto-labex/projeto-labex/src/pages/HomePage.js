@@ -63,14 +63,15 @@ span{
 `
 
 const Botoes = styled.div`
-    display: flex;
-    flex-direction:row;
+display: flex;
+flex-direction:row;
 gap: 30px;
 justify-content:center;
 
     button{
         padding: 8px;
         max-width:100px;
+        font-style:italic;
     }
 `
 

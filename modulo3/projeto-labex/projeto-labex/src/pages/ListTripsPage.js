@@ -49,7 +49,6 @@ function ListTripsPage() {
                         Home
                     </button>
                 </div>
-
                 <div>
                     <div className="Titulo">
                         <h1>Embarque nas nossas Viagens </h1>

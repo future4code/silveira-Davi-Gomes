@@ -23,6 +23,7 @@ display: flex;
 justify-content: flex-end;
 margin-top:55px ;
 margin-right: 55px;
+font-style:italic;
 `
 
 

@@ -15,11 +15,32 @@ const GlobalStyles = styled.div`
     display: flex;
     height: 100vh;
     flex-direction: column;  
-    color: rgb(217, 176, 255);
+    color:white;
+`
+const Header = styled.div`
+display: flex;
+justify-content:flex-end;
+margin-right:30px ;
+margin-top:30px;
+`
+const BotaoCriar = styled.div`
+display: flex;
+justify-content:center;
+button{
+    height: 45px;
+    margin-top:30px;
+}
+`
+const Inputs = styled.div`
+margin-left:30%;
+
+
+`
+const SalaDeComando = styled.div`
+text-align:center;
 `
 
-
-export default function CreateTripPage() {
+ function CreateTripPage() {
     useProtectedPage()
     const navigate = useNavigate()
 
@@ -66,12 +87,17 @@ export default function CreateTripPage() {
     
     return (
         <GlobalStyles>
-           <button onClick={goHomePage}>
+                <Header>
+                    <button onClick={goHomePage}>
                     Home
-                </button>  
+                </button> 
+                </Header>
+                
                 <form onSubmit={create}>
-                <h1>Sala de comando</h1>
-                <div>
+                <SalaDeComando>
+                    <h1>Sala de comando</h1>  
+                </SalaDeComando>
+                <Inputs>
                     <input
                         name={"name"}
                         placeholder="Nome"
@@ -108,9 +134,14 @@ export default function CreateTripPage() {
                         value={form.durationInDays}
                         onChange={onChange}
                     />
-                </div>
-                <button>Criar</button>
+                </Inputs>
+                <BotaoCriar>
+                    <button>Criar</button> 
+                </BotaoCriar>
+                
+                
             </form>
         </GlobalStyles >
     )
 }
+export default CreateTripPage

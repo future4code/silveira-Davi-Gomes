@@ -4,21 +4,52 @@ import { useNavigate } from 'react-router-dom'
 import useProtectedPage from '../Hooks/useProtectedPage'
 import styled from 'styled-components'
 
-
-const Lista= styled.div`
-a{
-color: white;
-}
-
+const DivMeio = styled.div`
+display: flex;
+justify-content:center;
 `
 
+const Lista = styled.div`
+display: flex;
+justify-content: space-between;
+height: 100px;
+margin-top:45px ;
+border: 5px double aqua ;
+width: 350px;
+a{
+color: white;
+
+}
+button{
+height: 45px;
+width: 98px;
+margin-right: 10px;
+font-style:italic;
+}
+`
+const Header = styled.div`
+display: flex;
+justify-content: flex-end;
+margin-right: 10px;
+margin-top: 10px;
+button{
+height: 50px;
+width: 98px;
+font-size: 15px;
+font-style:italic;
+margin-left: 25px;
+cursor: pointer;
+}
+`
+const TextoCard = styled.div`
+cursor: pointer;
+`
 
 function AdminHomePage() {
   useProtectedPage()
   const navigate = useNavigate()
   const irParaHome = () => {
     navigate("/")
-
   }
   const irParaLogin = () => {
     navigate("/login")
@@ -26,7 +57,7 @@ function AdminHomePage() {
   const goCreateTripPage = () => {
     navigate("/admin/trip/create")
   }
-  const goTripsDetailsPage= (id) => {
+  const goTripsDetailsPage = (id) => {
     navigate(`/admin/trips/${id}`)
   }
   const [trips, setTrips] = useState([])
@@ -39,7 +70,7 @@ function AdminHomePage() {
         alert("Ocorreu um erro!!!")
       })
   }, [])
-  const logout = () =>{
+  const logout = () => {
     localStorage.removeItem("token")
     irParaLogin(navigate)
   }
@@ -61,31 +92,32 @@ function AdminHomePage() {
   }
   const tripsList = trips.map((list) => {
     return (
-      <Lista>
-        <a onClick={() => goTripsDetailsPage (list.id)}>{list.name}</a>
-        <div>
-          <button onClick={() => deletarViagem(list.id)}>
-          Apagar
-        </button>
-        </div>
-      </Lista>
+        <DivMeio>
+        <Lista>
+            <a onClick={() => goTripsDetailsPage(list.id)}>{list.name}</a>
+            <button onClick={() => deletarViagem(list.id)}>
+              Apagar
+            </button>
+        </Lista>
+        </DivMeio>
     )
   })
   return (
     <div>
+    <Header>
       <button onClick={logout}>logout</button>
       <button onClick={irParaHome}>
         Home
       </button>
       <button onClick={goCreateTripPage}>
-      criar viagem
+        criar viagem
       </button>
-      
+      </Header>
+     <TextoCard>
         {trips && tripsList}
-      
-        
-      
-    </div>
+     </TextoCard>
+     
+      </div>
   )
 }
 

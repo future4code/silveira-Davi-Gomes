@@ -48,6 +48,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 height: 8vh;
+font-style:italic;
 } 
 .BotaoCriar>button{
 margin-right:25px;
@@ -64,5 +65,6 @@ display: flex;
 justify-content: flex-end;
 margin-top:55px ;
 margin-right: 55px;
+font-style:italic;
 } 
 
