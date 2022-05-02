@@ -38,6 +38,7 @@ margin-left:30%;
 `
 const SalaDeComando = styled.div`
 text-align:center;
+
 `
 
  function CreateTripPage() {
