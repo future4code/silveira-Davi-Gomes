@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import './css/ListTripsPage.css'
 import axios from 'axios'
-import useProtectedPage from '../Hooks/useProtectedPage'
+
 
 
 function ListTripsPage() {
-    useProtectedPage()
+    
     const navigate = useNavigate()
     const irParaHome = () => {
         navigate("/")

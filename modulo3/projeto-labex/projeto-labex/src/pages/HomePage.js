@@ -77,7 +77,7 @@ justify-content:center;
 
 function HomePage() {
     const navigate = useNavigate()
-    const irParaViagem = () => {
+    const goTripPage = () => {
         navigate("/trips/list")
     }
     const irParaLogin = () => {
@@ -98,7 +98,7 @@ function HomePage() {
                 <button onClick={irParaLogin}>
                     Login
                 </button>
-                <button onClick={irParaViagem}>
+                <button onClick={()=>goTripPage(navigate)}>
                     Viagens
                 </button>
             </Botoes>
