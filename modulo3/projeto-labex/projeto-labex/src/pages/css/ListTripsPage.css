@@ -1,0 +1,70 @@
+.GlobalStyles{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;  
+    color: white;
+}
+.card2 {
+     
+    list-style-type:none;
+    width: 90vh;
+    height: auto;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    
+}
+.card__content {
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    background: rgb(5, 6, 45);
+    border-radius: 17px;
+    gap: 20px;
+    padding: 5px;
+    justify-content: center;
+    
+}
+.CardGrande{
+display: flex;
+width: 200px;
+flex-direction: column;
+align-items: center;
+border: 5px double aqua ;
+padding: 15px;
+} 
+ 
+.Titulo{ 
+display: flex;
+justify-content:space-around;
+}
+.BotaoCriar{ 
+display: flex;
+align-items: center;
+flex-direction: column;
+height: 8vh;
+font-style:italic;
+} 
+.BotaoCriar>button{
+margin-right:25px;
+margin-left: 25px;
+
+}
+.Card{
+display: flex;
+justify-content: space-around;
+}
+ 
+.ButtonHome{
+display: flex;
+justify-content: flex-end;
+margin-top:55px ;
+margin-right: 55px;
+font-style:italic;
+} 
+
