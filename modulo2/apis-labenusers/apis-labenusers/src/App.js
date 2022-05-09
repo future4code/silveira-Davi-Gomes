@@ -1,6 +1,6 @@
 import React from "react"
 import Cadastro from "./components/Cadastro"
-import ListaUsuarios from "./components/ListaUsuarios"
+import ListaUsuarios from "./components/listaUsuarios"
 
 export default class App extends React.Component {
   state = {
