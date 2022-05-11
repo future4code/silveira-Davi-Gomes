@@ -1,15 +1,19 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
+import {signUp} from '../../services/user'
+
 
 
 export default function SignUpPage() {
   const navigate = useNavigate()
   const [form, onChange,clear] = useForm({username:"", email:"", password: ""})
+  
   const onSubmitForm =  (event) => {
   event.preventDefault()
-  console.log(form)
+  signUp(form, clear, navigate)
   }
+
   return (
     <div>
         <div>
