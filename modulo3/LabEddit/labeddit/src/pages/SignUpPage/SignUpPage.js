@@ -1,58 +1,58 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
-import {signUp} from '../../services/user'
+import { signUp } from '../../services/user'
 
 
 
 export default function SignUpPage() {
   const navigate = useNavigate()
-  const [form, onChange,clear] = useForm({username:"", email:"", password: ""})
-  
-  const onSubmitForm =  (event) => {
-  event.preventDefault()
-  signUp(form, clear, navigate)
+  const [form, onChange, clear] = useForm({ username: "", email: "", password: "" })
+
+  const onSubmitForm = (event) => {
+    event.preventDefault()
+    signUp(form, clear, navigate)
   }
 
   return (
     <div>
-        <div>
+      <div>
         {/* imagem */}
       </div>
-        <form onSubmit={onSubmitForm}>
-      <input
-      value={form.username}
-      name={"username"}
-      onChange={onChange}
-      placeholder="username"
-      type={"username"}
-      />
-      <input 
-      value={form.email}
-      name={"email"}
-      onChange={onChange}
-      placeholder="Email"
-      required
-      type={"email"}
-      />
-      
-      <input 
-      value={form.password}
-      name={"password"}
-      onChange={onChange}
-      placeholder="Senha"
-      type={"password"}
-      required
-      />
-        
-    
-      <button
-      type={"submit"}
-      >Cadastrar
-      </button>
-          
-        </form>
-      </div>
-    
+      <form onSubmit={onSubmitForm}>
+        <input
+          value={form.username}
+          name={"username"}
+          onChange={onChange}
+          placeholder="username"
+          type={"username"}
+        />
+        <input
+          value={form.email}
+          name={"email"}
+          onChange={onChange}
+          placeholder="Email"
+          required
+          type={"email"}
+        />
+
+        <input
+          value={form.password}
+          name={"password"}
+          onChange={onChange}
+          placeholder="Senha"
+          type={"password"}
+          required
+        />
+
+
+        <button
+          type={"submit"}
+        >Cadastrar
+        </button>
+
+      </form>
+    </div>
+
   )
 }

@@ -14,7 +14,7 @@ export const login = (body,clear,navigate) => {
         clear()
         goToFeed(navigate)
       })
-      .catch((err) => alert("Erro no login"))
+      .catch((err) => alert("Erro no login",err.response))
   }
 
   export const signUp = (body,clear,navigate) => {
@@ -36,6 +36,16 @@ export const login = (body,clear,navigate) => {
             clear()
         })
         .catch((err) => {
-            alert("Ocorreu um erro por favor, tente novamente.")
+            alert("Ocorreu um erro por favor, tente novamente.",err.response)
         })
+}
+export const createComment = (body, id, clear) =>{
+  axios.post(`${Base_URL}/posts/${id}/comments`,body, headers)
+  .then((res) => {
+    clear()
+    alert("Comentario criado com sucesso!")
+  })
+  .catch((err) =>{
+    alert("Ocorreu um erro por favor, tente novamente.",err.response)
+  })
 }
