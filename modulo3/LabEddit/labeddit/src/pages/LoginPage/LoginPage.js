@@ -4,7 +4,7 @@ import useForm from '../../hooks/useForm'
 import { goToSignUp, goToFeed } from '../../routes/coordinator'
 import { login } from '../../services/user'
 import useProtectedPage from '../../hooks/useProtectedPage'
-import { Botoes, Botao2,ContainerPai,Inputs} from './styled'
+import {Form, ScreenContainer, Button2} from './styled'
 
 
 export default function LoginPage() {
@@ -19,13 +19,13 @@ export default function LoginPage() {
   }
 
   return (
-    <ContainerPai>
+    <ScreenContainer>
       <div>
         loginPage
         {/* imagem */}
       </div>
-      <form onSubmit={onSubmitForm}>
-        <Inputs>
+      <Form onSubmit={onSubmitForm}>
+        
           <input
             name={"email"}
             value={form.email}
@@ -33,7 +33,7 @@ export default function LoginPage() {
             placeholder="Email"
             required
             type={"email"}
-          />
+            />
           <input
             name={"password"}
             value={form.password}
@@ -41,24 +41,22 @@ export default function LoginPage() {
             placeholder="Senha"
             required
             type={"password"}
-          />
-        </Inputs>
-        <Botoes>
+            />
           <button
             type={"submit"}
           >
-          <span>login</span> 
+          login 
           </button>
-        </Botoes>
-      </form>
-      <Botao2>
-        <button
+        <hr/>
+          </Form>
+      
+        <Button2
           onClick={() => goToSignUp(navigate)}
           type={"submit"}
-        >
+          >
           cadastre-se
-        </button>
-      </Botao2>
-    </ContainerPai>
+        </Button2>
+     
+    </ScreenContainer>
   )
 }

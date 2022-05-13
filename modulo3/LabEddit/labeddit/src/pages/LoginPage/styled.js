@@ -1,68 +1,49 @@
 import styled from "styled-components"
 
 
-export const ContainerPai = styled.div`
+export const ScreenContainer = styled.div`
 display: flex;
 flex-direction: column;
-height: 100vh;
 align-items: center;
-justify-content: space-evenly;
+justify-content: center;
+width: 100%;
+height: 100vh;
+color: #373737;
 `
 
-export const Botoes = styled.div`
+
+export const Form = styled.form`
 display: flex;
-justify-content: space-around;
+flex-direction: column;
+align-items: center;
+gap: 5px;
+input{
+width: 363px;
+height: 60px;
+left: 35px;
+top: 403px;
+}
+button{
 margin-top: 15px;
-button {
- display: inline-block;
- border-radius: 10px;
- background-color:#3f00b5;
- border: none;
- color: #FFFFFF;
- text-align: center;
- font-size: 17px;
- padding: 16px;
- width: 130px;
- transition: all 0.5s;
- cursor: pointer;
- margin: 5px;
-}
-
-button span {
- cursor: pointer;
- display: inline-block;
- position: relative;
- transition: 0.5s;
-}
-
-button span:after {
- content: '»';
- position: absolute;
- opacity: 0;
- top: 0;
- right: -15px;
- transition: 0.5s;
-}
-
-button:hover span {
- padding-right: 15px;
-}
-
-button:hover span:after {
- opacity: 1;
- right: 0;
-}
-`
-export const Botao2 = styled.div`
+margin-bottom: 15px;
 display: flex;
-justify-content: space-around;
-button {
-background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
-background-size: 800% 400%;
-padding: 1em 2em;
-display: inline-block;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 13px 133px;
+width: 400px;
+height: 51px;
+left: 29px;
+top: 587px;
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 27px;
 border: none;
-border-radius: 10px;
+background: linear-gradient(90deg, #FF6489 0%, #F9B24E 100%);
+background-size: 800% 400%;
+
+border: none;
+
 font-size: 17px;
 font-weight: 700;
 color: white;
@@ -88,39 +69,55 @@ background-position: 0% 50%;
 50% {
 background-position: 100% 50%;
 }
-
-100% {
-background-position: 0% 50%;
+}
+p{
+width: 91px;
+height: 25px;
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0; 
 }
 }
-}
+hr {
+   margin-bottom: 15px;
+  background: linear-gradient(90deg, #FF6489 0%, #F9B24E 100%);
+        width: 400px;
+        height: 0.2vh;
+        border: none;
+    }
 `
-
-export const Inputs = styled.div`
-
-input {
-  max-width: 190px;
-  height: 30px;
-  border: 2px solid transparent;
-  outline: none;
-  border-bottom: 2px solid #3f3f3f;
-  caret-color: #3f3f3f;
-  background-color: #212121;
-  padding: 5px;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
-}
-
-input:focus {
-  border: 2px solid #fa4753;
-  caret-color: #fa4753;
-  color: #fa4753;
-  box-shadow: 4px 4px 10px #070707;
-}
-
-input:focus::placeholder {
-  color: #fa4753;
+export const Button2 = styled.div`
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 13px 133px;
+width: 400px;
+height: 51px;
+left: 29px;
+top: 676px;
+border: 1px solid #FE7E02;
+border-radius: 27px;
+cursor: pointer;
+p{
+width: 142px;
+height: 25px;
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+color: #FE7E02;
+flex: none;
+order: 0;
+flex-grow: 0;
 }
 
 `
