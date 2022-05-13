@@ -56,7 +56,6 @@ export default function LoginPage() {
           >
           cadastre-se
         </Button2>
-     
     </ScreenContainer>
   )
 }

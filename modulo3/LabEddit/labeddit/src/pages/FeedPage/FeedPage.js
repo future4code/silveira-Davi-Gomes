@@ -6,6 +6,16 @@ import { goToLogin, goToPost } from '../../routes/coordinator'
 import useRequestData from '../../hooks/useRequestData'
 import useForm from '../../hooks/useForm'
 import { createPost } from '../../services/user'
+import downvoteblack from '../../assets/downvoteblack.png'
+import downvotered from '../../assets/downvotered.png'
+import upvotegreen from '../../assets/upvotegreen.png'
+import upvoteblack from '../../assets/upvoteblack.png'
+import comment from '../../assets/comment.png'
+import axios from 'axios'
+
+
+
+
 
 
 
@@ -13,11 +23,11 @@ export default function FeedPage() {
     useProtectedPage();
     const navigate = useNavigate();
 
-    const logout = () =>{
+    const logout = () => {
         localStorage.removeItem("token")
         goToLogin(navigate)
     }
-    
+
     const posts = useRequestData([], `${Base_URL}/posts`)
 
     const [form, onChange, clear] = useForm({ title: "", body: "" })
@@ -33,16 +43,68 @@ export default function FeedPage() {
             <div onClick={() => goToPost(navigate, posts.id)} key={posts.id}>
                 <p>Enviado por: {posts.username}</p>
                 <p>{posts.title}</p>
-                <p>{posts.voteSum}</p>
-                <p>{posts.userVote}</p>
+                <div>
+                    <img src={posts.userVote === 1 ? upvotegreen : upvoteblack} onClick={() => handleLike(posts.id, posts.userVote)} />
+                    <p>{posts.voteSum}</p>
+                    <img src={posts.downVote === -1 ? downvotered : downvoteblack} onClick={() => handleNoLike(posts.id, posts.userVote)} />
+                    <img src={comment} onClick={() => goToPost(navigate, posts.id)} key={posts.id} /> {posts.commentCount}
+                </div>
+
             </div>
         )
     });
+    const handleVote = (postId, direction) => {
+        const headers = {
+            headers: {
+                Authorization: localStorage.getItem("token")
+            }
+        }
+        const body = {
+            direction: direction
+        }
+        if (direction === 1) {
+            axios.post(`${Base_URL}/comments/${postId}/votes`, body, headers
+            ).then((res) => {
+                console.log(res)
+            }).catch((err) => {
+                console.log(err)
+            })
+        } else if (direction === -1) {
+            axios.put(`${Base_URL}/comments/${postId}/votes`, body, headers
+            ).then((res) => {
+                console.log(res)
+            }).catch((err) => {
+                console.log(err)
+            })
+        } else {
+            axios.delete(`${Base_URL}/comments/${postId}/votes`, headers
+            ).then((res) => {
+                console.log(res)
+            }).catch((err) => {
+                console.log(err)
+            })
+        }
+    }
 
+    const handleLike = (postId, userVote) => {
+        if (userVote === 1) {
+            handleVote(postId)
+        } else {
+            handleVote(postId, 1)
+        }
+    }
+
+    const handleNoLike = (postId, userVote) => {
+        if (userVote === -1) {
+            handleVote(postId)
+        } else {
+            handleVote(postId, -1)
+        }
+    }
     return (
         <div>
             <button onClick={logout}>Logout</button>
-            <div/>
+            <div />
             <div>
                 <h1>Feed Page</h1>
                 <form onSubmit={onSubmitForm}>
@@ -59,7 +121,7 @@ export default function FeedPage() {
                         value={form.body}
                         onChange={onChange}
                         required
-                   />
+                    />
                     <button>Postar</button>
                 </form>
                 {listPost}
