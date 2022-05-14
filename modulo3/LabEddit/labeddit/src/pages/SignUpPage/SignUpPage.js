@@ -1,7 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
-import { signUp } from '../../services/user'
+import { signUp} from '../../services/user'
+import {goToLogin} from '../../routes/coordinator'
+import Logo from '../../assets/logo.png'
+import {Header} from './styled'
 
 
 
@@ -16,9 +19,15 @@ export default function SignUpPage() {
 
   return (
     <div>
-      <div>
-        {/* imagem */}
-      </div>
+      <Header>
+        <img src={Logo}></img>
+        <button
+          onClick={() => goToLogin(navigate)}
+          type={"submit"}
+          >
+          Entrar
+        </button>
+      </Header>
       <form onSubmit={onSubmitForm}>
         <input
           value={form.username}
@@ -50,8 +59,8 @@ export default function SignUpPage() {
           type={"submit"}
         >Cadastrar
         </button>
-
       </form>
+      
     </div>
 
   )
