@@ -46,7 +46,7 @@ export default function FeedPage() {
                 <div>
                     <img src={posts.userVote === 1 ? upvotegreen : upvoteblack} onClick={() => handleLike(posts.id, posts.userVote)} />
                     <p>{posts.voteSum}</p>
-                    <img src={posts.downVote === -1 ? downvotered : downvoteblack} onClick={() => handleNoLike(posts.id, posts.userVote)} />
+                    <img src={posts.userVote === -1 ? downvotered : downvoteblack} onClick={() => handleNoLike(posts.id, posts.userVote)} />
                     <img src={comment} onClick={() => goToPost(navigate, posts.id)} key={posts.id} /> {posts.commentCount}
                 </div>
 
@@ -63,21 +63,21 @@ export default function FeedPage() {
             direction: direction
         }
         if (direction === 1) {
-            axios.post(`${Base_URL}/comments/${postId}/votes`, body, headers
+            axios.post(`${Base_URL}/posts/${postId}/votes`, body, headers
             ).then((res) => {
                 console.log(res)
             }).catch((err) => {
                 console.log(err)
             })
         } else if (direction === -1) {
-            axios.put(`${Base_URL}/comments/${postId}/votes`, body, headers
+            axios.put(`${Base_URL}/posts/${postId}/votes`, body, headers
             ).then((res) => {
                 console.log(res)
             }).catch((err) => {
                 console.log(err)
             })
         } else {
-            axios.delete(`${Base_URL}/comments/${postId}/votes`, headers
+            axios.delete(`${Base_URL}/posts/${postId}/votes`, headers
             ).then((res) => {
                 console.log(res)
             }).catch((err) => {
@@ -115,7 +115,7 @@ export default function FeedPage() {
                         onChange={onChange}
                         required
                     />
-                    <input
+                    <textarea
                         placeholder="Escreva seu post..."
                         name={"body"}
                         value={form.body}

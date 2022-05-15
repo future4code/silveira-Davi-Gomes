@@ -4,8 +4,8 @@ import useForm from '../../hooks/useForm'
 import { goToSignUp, goToFeed } from '../../routes/coordinator'
 import { login } from '../../services/user'
 import useProtectedPage from '../../hooks/useProtectedPage'
-import {Form, ScreenContainer, Button2} from './styled'
-
+import {Form, ScreenContainer, Button2,ContainerHeader} from './styled'
+import Logo from '../../assets/logo.png'
 
 export default function LoginPage() {
   useProtectedPage()
@@ -20,10 +20,11 @@ export default function LoginPage() {
 
   return (
     <ScreenContainer>
-      <div>
-        loginPage
-        {/* imagem */}
-      </div>
+      <ContainerHeader>
+        <img src={Logo}></img>
+        <h1>LabEddit</h1>
+        <p>o projeto de rede social da Labenu</p>
+      </ContainerHeader>
       <Form onSubmit={onSubmitForm}>
         
           <input

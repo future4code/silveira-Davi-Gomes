@@ -9,7 +9,7 @@ import downvoteblack from '../../assets/downvoteblack.png'
 import downvotered from '../../assets/downvotered.png'
 import upvotegreen from '../../assets/upvotegreen.png'
 import upvoteblack from '../../assets/upvoteblack.png'
-import comment from '../../assets/comment.png'
+import comments from '../../assets/comment.png'
 import axios from 'axios'
 import {goToPost} from  '../../routes/coordinator'
 
@@ -19,13 +19,13 @@ export default function PostPage() {
   const navigate = useNavigate()
   const paramns = useParams()
   const posts = useRequestData([],`${Base_URL}/posts`)
-  const comments = useRequestData([],`${Base_URL}/posts/${paramns.id}/comments`)
+  const detail = useRequestData([],`${Base_URL}/posts/${paramns.id}/comments`)
   const [form, onChange, clear] = useForm({body:""})
   const onSubmitForm = (event) =>{
     event.preventDefault()
     createComment(form,paramns.id,clear)
   }
- const listComment = comments && comments.map((comments)=>{
+ const listComment = detail && detail.map((comments)=>{
 return(
   <div key={comments.id}>
     <p>
@@ -46,8 +46,8 @@ const listPost = posts && posts.map((posts) => {
             <div>
                     <img src={posts.userVote === 1 ? upvotegreen : upvoteblack} onClick={() => handleLike(posts.id, posts.userVote)} />
                     <p>{posts.voteSum}</p>
-                    <img src={posts.downVote === -1 ? downvotered : downvoteblack} onClick={() => handleNoLike(posts.id, posts.userVote)} />
-                    <img src={comment} onClick={() => goToPost(navigate, posts.id)} key={posts.id} /> {posts.commentCount}
+                    <img src={posts.userVote === -1 ? downvotered : downvoteblack} onClick={() => handleNoLike(posts.id, posts.userVote)} />
+                    <img src={comments} onClick={() => goToPost(navigate, posts.id)} key={posts.id} /> {posts.commentCount}
                 </div>
         </div>
     )
@@ -63,21 +63,21 @@ const handleVote = (postId, direction) => {
       direction: direction
   }
   if (direction === 1) {
-      axios.post(`${Base_URL}/comments/${postId}/votes`, body, headers
+      axios.post(`${Base_URL}/posts/${postId}/votes`, body, headers
       ).then((res) => {
           console.log(res)
       }).catch((err) => {
           console.log(err)
       })
   } else if (direction === -1) {
-      axios.put(`${Base_URL}/comments/${postId}/votes`, body, headers
+      axios.put(`${Base_URL}/posts/${postId}/votes`, body, headers
       ).then((res) => {
           console.log(res)
       }).catch((err) => {
           console.log(err)
       })
   } else {
-      axios.delete(`${Base_URL}/comments/${postId}/votes`, headers
+      axios.delete(`${Base_URL}/posts/${postId}/votes`, headers
       ).then((res) => {
           console.log(res)
       }).catch((err) => {
@@ -104,7 +104,7 @@ const handleNoLike = (postId, userVote) => {
   return (
     <div>
       {listPost}
-      {listComment}
+      
       <form onSubmit = {onSubmitForm}> 
       <input
       placeholder={"add comentario"}
@@ -117,7 +117,7 @@ const handleNoLike = (postId, userVote) => {
       <button>comentar</button>
       
       </form>
-      
+      {listComment}
       </div>
   )
 }

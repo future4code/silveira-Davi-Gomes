@@ -4,7 +4,7 @@ import useForm from '../../hooks/useForm'
 import { signUp} from '../../services/user'
 import {goToLogin} from '../../routes/coordinator'
 import Logo from '../../assets/logo.png'
-import {Header} from './styled'
+import {Header,ScreenContainer} from './styled'
 
 
 
@@ -28,6 +28,7 @@ export default function SignUpPage() {
           Entrar
         </button>
       </Header>
+    <ScreenContainer>
       <form onSubmit={onSubmitForm}>
         <input
           value={form.username}
@@ -61,7 +62,7 @@ export default function SignUpPage() {
         </button>
       </form>
       
-    </div>
-
+    </ScreenContainer>
+</div>
   )
 }
