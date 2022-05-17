@@ -14,6 +14,6 @@ export const goToPost = (navigate,id) => {
     navigate(`/post/${id}`)
     
 }
-// export const GoBack = (navigate) => {
-//     navigate(-1)
-// }
+export const goBack = (navigate) => {
+    navigate(-1)
+}

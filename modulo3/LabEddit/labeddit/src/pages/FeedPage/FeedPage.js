@@ -12,8 +12,8 @@ import upvotegreen from '../../assets/upvotegreen.png'
 import upvoteblack from '../../assets/upvoteblack.png'
 import comment from '../../assets/comment.png'
 import axios from 'axios'
-
-
+import { ScreenContainer, Header3, ContainerPost, ButtonLike, Form} from './styled'
+import Logo from '../../assets/logo.png'
 
 
 
@@ -40,17 +40,16 @@ export default function FeedPage() {
 
     const listPost = posts && posts.map((posts) => {
         return (
-            <div onClick={() => goToPost(navigate, posts.id)} key={posts.id}>
+            <ContainerPost>
                 <p>Enviado por: {posts.username}</p>
                 <p>{posts.title}</p>
-                <div>
+                <ButtonLike>
                     <img src={posts.userVote === 1 ? upvotegreen : upvoteblack} onClick={() => handleLike(posts.id, posts.userVote)} />
                     <p>{posts.voteSum}</p>
-                    <img src={posts.userVote === -1 ? downvotered : downvoteblack} onClick={() => handleNoLike(posts.id, posts.userVote)} />
+                    <img src={posts.downVote === -1 ? downvotered : downvoteblack} onClick={() => handleNoLike(posts.id, posts.userVote)} />
                     <img src={comment} onClick={() => goToPost(navigate, posts.id)} key={posts.id} /> {posts.commentCount}
-                </div>
-
-            </div>
+                </ButtonLike>
+            </ContainerPost>
         )
     });
     const handleVote = (postId, direction) => {
@@ -103,29 +102,26 @@ export default function FeedPage() {
     }
     return (
         <div>
-            <button onClick={logout}>Logout</button>
-            <div />
-            <div>
-                <h1>Feed Page</h1>
-                <form onSubmit={onSubmitForm}>
-                    <input
-                        placeholder="Titulo"
-                        name={"title"}
-                        value={form.title}
-                        onChange={onChange}
-                        required
-                    />
-                    <textarea
-                        placeholder="Escreva seu post..."
-                        name={"body"}
-                        value={form.body}
-                        onChange={onChange}
-                        required
-                    />
-                    <button>Postar</button>
-                </form>
-                {listPost}
-            </div>
+            <Header3>
+                <img src={Logo}></img>
+                <button onClick={logout}>Logout</button>
+            </Header3>
+            <ScreenContainer>
+                    <form onSubmit={onSubmitForm}>
+                        <Form>
+                        <textarea
+                            placeholder="Escreva seu post..."
+                            name={"body"}
+                            value={form.body}
+                            onChange={onChange}
+                            
+                        />
+                        <button>Postar</button>
+                        <hr/>
+                        </Form>
+                    </form>
+                    {listPost}
+            </ScreenContainer>
         </div>
     )
 }

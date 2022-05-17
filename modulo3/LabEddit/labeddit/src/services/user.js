@@ -33,7 +33,8 @@ export const login = (body,clear,navigate) => {
   export const createPost = (body, clear) => {
     axios.post(`${Base_URL}/posts`, body, headers)
         .then((res) => {
-            clear()
+            alert("post criado com sucesso!")
+          clear()
         })
         .catch((err) => {
             alert("Ocorreu um erro por favor, tente novamente.",err.response)

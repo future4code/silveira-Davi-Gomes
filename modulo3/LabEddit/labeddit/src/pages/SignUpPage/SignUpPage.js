@@ -4,7 +4,7 @@ import useForm from '../../hooks/useForm'
 import { signUp} from '../../services/user'
 import {goToLogin} from '../../routes/coordinator'
 import Logo from '../../assets/logo.png'
-import {Header,ScreenContainer} from './styled'
+import {Header,ScreenContainer, Form} from './styled'
 
 
 
@@ -29,7 +29,8 @@ export default function SignUpPage() {
         </button>
       </Header>
     <ScreenContainer>
-      <form onSubmit={onSubmitForm}>
+            <h2>Olá, boas vindas ao LabEddit</h2>
+      <Form onSubmit={onSubmitForm}>
         <input
           value={form.username}
           name={"username"}
@@ -54,13 +55,11 @@ export default function SignUpPage() {
           type={"password"}
           required
         />
-
-
         <button
           type={"submit"}
         >Cadastrar
         </button>
-      </form>
+      </Form>
       
     </ScreenContainer>
 </div>
