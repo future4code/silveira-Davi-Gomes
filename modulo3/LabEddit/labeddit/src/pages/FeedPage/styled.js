@@ -11,7 +11,7 @@ button{
 margin-bottom: 10px;
 }
 input{
-width: 300px;
+width: 364px;
 height: 50px;
 left: 30px;
 top: 124px;
@@ -119,7 +119,7 @@ hr{
 export const Header3 = styled.div` 
 display: flex;
 justify-content: space-between;
-width: 428px;
+width: 100%;
 height: 50px;
 left: 0px;
 top: 0px;

@@ -34,7 +34,7 @@ export default function FeedPage() {
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-        alert("Posts criado com sucesso!")
+        alert("Post criado com sucesso!")
         createPost(form, clear)
     };
 
@@ -109,12 +109,19 @@ export default function FeedPage() {
             <ScreenContainer>
                     <form onSubmit={onSubmitForm}>
                         <Form>
+                        <input
+                        placeholder="Título"
+                        name={"title"}
+                        value={form.title}
+                        onChange={onChange}
+                        required
+                    />
                         <textarea
                             placeholder="Escreva seu post..."
                             name={"body"}
                             value={form.body}
                             onChange={onChange}
-                            
+                            required
                         />
                         <button>Postar</button>
                         <hr/>
