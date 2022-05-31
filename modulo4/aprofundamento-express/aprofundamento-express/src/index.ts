@@ -9,19 +9,19 @@ app.use(express.json())
 
 app.listen(3003, () => console.log("Servidor disponível em 3003"))
 
-app.get("/ping", (req, res) => {          
+app.get("/ping", (req, res) => {
   res.send("Pong! 🏓")
-}) 
+})
 
 type Tasks = {
   userId: number,
-  id:number,
-  title:string,
-  completed:boolean
+  id: number,
+  title: string,
+  completed: boolean
 
 }
 
-const tasks: Tasks[] =[
+const tasks: Tasks[] = [
   {
     "userId": 1,
     "id": 19,
@@ -47,23 +47,24 @@ const tasks: Tasks[] =[
     "completed": true
   },
 ]
- app.get("/tasks",(req,res)=>{
-   const done = tasks.filter((item)=>{
-     return item.completed == true
-   })
-   res.send(done)
- })
+app.get("/tasks", (req, res) => {
+  const done = tasks.filter((item) => {
+    return item.completed == true
+  })
+  res.send(done)
+})
 
- app.post("/newtsks", (req, res)=>{
-   const users: number = Number(req.headers.authorization)
-   const titleTask = req.body.title
-   const id = tasks.length + 1 
-   const newTasks: Tasks = {
-     userId:users,
-     id:id,
-     title:titleTask,
-     completed:req.body.completed
-   }
-   tasks.push(newTasks)
-   res.send(tasks)
- })
+app.post("/newtsks", (req, res) => {
+  const users: number = Number(req.headers.authorization)
+  const titleTask = req.body.title
+  const id = tasks.length + 1
+
+  const newTasks: Tasks = {
+    userId: users,
+    id: id,
+    title: titleTask,
+    completed: req.body.completed
+  }
+  tasks.push(newTasks)
+  res.send(tasks)
+})
