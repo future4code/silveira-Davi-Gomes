@@ -10,7 +10,7 @@ export type Account = {
 
 export let users: Account[] = [
     {
-        name: "Ariane",
+        name: "Robervaldo",
         cpf: "89580134006",
         birthdate: "21/07/1993",
         balance: 0,
@@ -23,9 +23,9 @@ export let users: Account[] = [
         ]
     },
     {
-        name: "Fernando",
+        name: "Paula",
         cpf: "29010783030",
-        birthdate: "06/12/1990",
+        birthdate: "02/12/1991",
         balance: 0,
         extract: [
             {
@@ -36,9 +36,9 @@ export let users: Account[] = [
         ]
     },
     {
-        name: "Brisa",
+        name: "Jorge",
         cpf: "38338147052",
-        birthdate: "01/09/2020",
+        birthdate: "03/08/2020",
         balance: 0,
         extract: [
             {
