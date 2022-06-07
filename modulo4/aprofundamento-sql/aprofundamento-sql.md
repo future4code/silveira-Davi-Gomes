@@ -13,7 +13,7 @@ UPDATE Ator SET nome = "Juliana Paes" WHERE id = "005";
 # C)
 ATUALIZAÇÃO Ator SET nome = "Moacyr Franco", data_nascimento = "2020-02-10", salário = 600000, sexo = "masculino" WHERE id = "005";
 # 0 linha(s) de declarações(s) Linhas correspondentes: 0 Alteradas: 0 Avisos: 0.
-UPDATE Ator SET nome = "Ariane Tier" WHERE id = "008";
+UPDATE Ator SET nome = "Robervaldo Santos" WHERE id = "008";
 # 3
 # a)
 DELETE FROM Ator WHERE nome = "Fernanda Torres";
