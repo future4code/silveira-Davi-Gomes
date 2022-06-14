@@ -1,0 +1,21 @@
+GET http://localhost:3003/user?name=Maju
+Content-Type: application/json
+
+###
+
+GET http://localhost:3003/orderuser?orderby=type 
+Content-Type: application/json
+
+###
+
+GET http://localhost:3003/orderby?orderBy=email&orderType=DESC
+Content-Type: application/json 
+
+###
+
+GET http://localhost:3003/page?page=1
+Content-Type: application/json 
+
+### 
+GET http://localhost:3003/all
+Content-Type: application/json 
