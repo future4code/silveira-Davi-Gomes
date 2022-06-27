@@ -1,0 +1,25 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "email": "teste@email.com",
+    "password": "teste1"
+}
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email": "teste@email.com",
+    "password": "teste1"
+}
+
+###
+
+GET http://localhost:3003/user/profile
+
+{
+    "id": "6e4f3a8e-70a9-4d24-b5e5-081f37ea8a26"
+}
