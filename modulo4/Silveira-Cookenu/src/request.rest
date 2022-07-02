@@ -1,0 +1,51 @@
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+    "name": "",
+    "email": "",
+    "password": "",
+    "role": ""
+}
+
+###
+
+# @name login
+POST http://localhost:3003/login 
+Content-Type: application/json
+
+{ 
+    "email": "Davi@email.com",
+    "password": "123456"
+}
+
+###
+
+@token = {{login.response.body.token}}
+GET http://localhost:3003/user/profile
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+@token = {{login.response.body.token}}
+GET http://localhost:3003/user/43a20bdf-3fa8-4976-b474-73b52dacb3af
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+@token = {{login.response.body.token}}
+POST http://localhost:3003/recipe
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "title": "Pão de queijo",
+    "description": "Pão de queijo lecionado por chefes mineiro"
+}
+
+###
+@token = {{login.response.body.token}}
+GET http://localhost:3003/recipe/a24c40df-3f99-4b28-8d7d-0a9176bde930
+Content-Type: application/json
+Authorization: {{token}}
