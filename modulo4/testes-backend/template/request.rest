@@ -1,0 +1,23 @@
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Davi",
+    "email": "Davi@hotmail.com",
+    "password": "123456",
+    "role": "NORMAL"
+}
+
+###
+
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "Davi@hotmail.com",
+    "password": "123456"
+}
+
+###
+
+GET http://localhost:3003/users/profile/88483793-d1a8-4acd-8e60-fb38e743487f
