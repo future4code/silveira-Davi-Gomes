@@ -1,14 +1,39 @@
+import React from 'react'
+import Router from './router/Router'
 
-import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
-  );
+  return(
+    <Router/>
+  )
 }
 
-export default App;
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+        
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
