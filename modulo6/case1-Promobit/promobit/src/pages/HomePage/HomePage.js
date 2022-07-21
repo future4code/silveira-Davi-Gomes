@@ -1,8 +1,11 @@
-import { Header } from "../components/Header"
-import { useRequestData } from "../Hooks/useRequestData"
-import {MovieCardComponents} from "../components/MovieCard.tsx"
+import { Header } from "../../components/Header"
+import { useRequestData } from "../../Hooks/useRequestData"
+import {MovieCardComponents} from "../../components/MovieCard.tsx"
 import { useNavigate } from "react-router-dom"
-import {MovieGenreButtonComponents} from "../components/MovieGenreButton.tsx"
+import {MovieGenreButtonComponents} from "../../components/MovieGenreButton.tsx"
+import {CardContainer,StyledCardHome} from "./Styled"
+
+
 
 export function HomePage() {
     const genres = useRequestData([], "/genre/movie/list")
@@ -18,36 +21,33 @@ export function HomePage() {
 
     const moviesList = movies.data.data && movies.data.data.results.map((movie) => {
         return (
+            <CardContainer>
             <MovieCardComponents key={movie.id}
                 id={movie.id}
                 poster={movie.poster_path}
                 title={movie.title}
                 release_date={movie.release_date}
                 navigate={navigate}
-            />
-        );
-    });
+                />
+                </CardContainer>
+        )
+    })
 
     return (
-        <div className="container">
+        <StyledCardHome>
             <Header/>
-            <div className="">
-                <h1 className="">
+            <div class="movie-list">
+                <h1>
                     Milhões de filmes, séries e pesssoas <br /> para descobrir. Explore já.
                 </h1>
-
-                <p className="">Filtre por:</p>
-
-                <div className="genresList">
+                <p >Filtre por:</p>
+                <div>
                     {genresList}
                 </div>
-
                 
-                    <div className="moviesList">
                         {moviesList}
-                    
-                </div>
+                
             </div>
-        </div>
+        </StyledCardHome>
     )
 }
