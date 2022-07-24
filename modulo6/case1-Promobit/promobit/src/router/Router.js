@@ -1,7 +1,35 @@
 import React from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter,Route,Routes} from "react-router-dom";
 import { HomePage } from "../pages/HomePage/HomePage";
-import {DetailsPage} from "../pages/DetailsPage"
+import {DetailsPage} from "../pages/DetailsPage/DetailsPage"
+
+
+// export const Router = () => {
+//     return(
+//         <BrowserRouter>
+//             <Switch>
+//                 <Route exact path="/" >
+//                     <HomePage />
+//                 </Route>
+//                 <Route exact path="/details/:id">
+//                     <DetailsPage/>
+//                 </Route>
+//             </Switch>
+//         </BrowserRouter>
+//     )
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const Router = () => {

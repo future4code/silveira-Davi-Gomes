@@ -1,6 +1,6 @@
 
 import React from "react";
-import { useRequestData } from "../hooks/useRequestData";
+// import { useRequestData } from "../Hooks/useRequestData";
 
 interface MovieGenreButtonProps {
     genre: string

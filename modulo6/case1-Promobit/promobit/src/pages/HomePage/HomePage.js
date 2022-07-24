@@ -4,14 +4,14 @@ import { MovieCardComponents } from "../../components/MovieCard.tsx"
 import { useNavigate } from "react-router-dom"
 import { MovieGenreButtonComponents } from "../../components/MovieGenreButton.tsx"
 import { CardContainer, StyledCardHome, TextContainer, ContainerFiltro, BotoesFiltro } from "./Styled"
-import { CompFooter } from "../../components/Footer/Footer"
+// import { CompFooter } from "../../components/Footer/Footer"
 
 
 export function HomePage() {
     const genres = useRequestData([], "/genre/movie/list")
     const movies = useRequestData([], "/movie/popular")
 
-    const navigate = useNavigate()
+    const Navigate = useNavigate()
 
     const genresList = genres.data.data && genres.data.data.genres.map((genre) => {
         return (
@@ -27,7 +27,7 @@ export function HomePage() {
                     poster={movie.poster_path}
                     title={movie.title}
                     release_date={movie.release_date}
-                    navigate={navigate}
+                    Navigate={Navigate}
                 />
             </CardContainer>
         )
@@ -50,7 +50,9 @@ export function HomePage() {
             <div class="movie-list">
                 {moviesList}
             </div>
-            <CompFooter/>
+            {/* <CompFooter/> */}
         </StyledCardHome>
     )
 }
+
+

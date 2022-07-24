@@ -94,7 +94,13 @@ Button{
     border-radius: 5px;
     border: none;
     margin:1px;
-    color: #323232
+    color: #323232;
+    cursor: pointer;
+    :hover{
+            opacity: 0.4;
+            
+        }
+    
 }
 
 
