@@ -1,48 +1,18 @@
 import React from "react"
-import { BrowserRouter,Route,Routes} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "../pages/HomePage/HomePage";
-import {DetailsPage} from "../pages/DetailsPage/DetailsPage"
+import { MovieDetailsPage } from "../pages/DetailsPage/DetailsPage.tsx"
 
 
-// export const Router = () => {
-//     return(
-//         <BrowserRouter>
-//             <Switch>
-//                 <Route exact path="/" >
-//                     <HomePage />
-//                 </Route>
-//                 <Route exact path="/details/:id">
-//                     <DetailsPage/>
-//                 </Route>
-//             </Switch>
-//         </BrowserRouter>
-//     )
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const Router = () => {
+ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-            <Route path="/" element={<HomePage/>}/>
-            <Route path="/details/:id" element={<DetailsPage/>}/>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/details/:id" element={<MovieDetailsPage />} />
             </Routes>
         </BrowserRouter>
     )
-
-
 }
 
 export default Router

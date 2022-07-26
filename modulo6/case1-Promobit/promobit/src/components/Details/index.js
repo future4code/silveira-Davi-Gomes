@@ -4,7 +4,7 @@ import { getMovieCredits, getMovieDetailts } from "../../Api/Axios_get"
 import GlobalStateContext from "../../Global/GlobalStateContext"
 import { minutesToHours } from "../../Utilities/convertMinutesHours"
 import { idMaker } from "../../Utilities/idMeker"
-// import { StyledMenuDetails, StyledMenuNames } from "./style"
+
 
 
 export const CompDetails = () => {

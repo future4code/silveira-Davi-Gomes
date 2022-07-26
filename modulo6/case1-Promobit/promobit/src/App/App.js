@@ -1,6 +1,6 @@
 import { GlobalState } from "../Global/GlobalState";
-import  Router  from "../router/Router";
-// import { StyledGlobal } from "./style";
+import Router from "../router/Router";
+
 
 function App() {
     return (

@@ -1,7 +1,6 @@
-import React from "react"
-import { BASE_URL_IMAGE } from "../constants/constants"
-import { goToDetails } from "../router/coordinator"
-
+import React from "react";
+import { BASE_URL_IMAGE } from "../constants/constants";
+import { DetailsPage } from "../router/coordinator.tsx";
 
 interface MovieCardProps {
     id: number,
@@ -11,17 +10,17 @@ interface MovieCardProps {
     navigate: any
 };
 
-export const MovieCardComponents = ({
+export function MovieCardComponents({
     id,
     poster,
     title,
     release_date,
     navigate
-}: MovieCardProps) =>{
-    const convertDate = (releaseDate) => {
-        let [year, month, day] = releaseDate.split("-")
+}: MovieCardProps) {
+    const convertDate = (releaseDate: string): string => {
+        let [year, month, day] = releaseDate.split("-");
 
-        switch (month) {
+        switch(month) {
             case "01":
                 month = "JAN";
                 break;
@@ -58,23 +57,35 @@ export const MovieCardComponents = ({
             case "12":
                 month = "DEZ";
                 break;
-        }
+        };
 
         return `${day} ${month} ${year}`;
-    }
+    };
 
 
     return (
         <div className="flex flex-col w-64">
-        <img className="border-transparent rounded h-96 hover:border cursor-pointer"
-        src={`${BASE_URL_IMAGE}${poster}`} 
-        alt={`${title} poster`}
-        onClick={ () => goToDetails(navigate, id) }
-        />
+            <img className="border-transparent rounded h-96 hover:border cursor-pointer"
+            src={`${BASE_URL_IMAGE}${poster}`} 
+            alt={`${title} poster`}
+            onClick={ () => DetailsPage(navigate, id) }
+            />
 
-        <p className="text-black font-bold my-1">{title}</p>
+            <p className="text-black font-bold my-1">{title}</p>
 
-        <p className="text-sm text-light_grey font-bold">{convertDate(release_date)}</p>
-    </div>
-    )
-}
+            <p className="text-sm text-light_grey font-bold">{convertDate(release_date)}</p>
+        </div>
+    );
+};
+
+
+
+
+
+
+
+
+
+
+
+// MovieCardComponents

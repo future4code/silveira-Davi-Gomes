@@ -1,4 +1,4 @@
-import { Header } from "../../components/Header"
+import { Header } from "../../components/Header.tsx"
 import { useRequestData } from "../../Hooks/useRequestData"
 import { MovieCardComponents } from "../../components/MovieCard.tsx"
 import { useNavigate } from "react-router-dom"
@@ -50,7 +50,6 @@ export function HomePage() {
             <div class="movie-list">
                 {moviesList}
             </div>
-            {/* <CompFooter/> */}
         </StyledCardHome>
     )
 }

@@ -19,11 +19,11 @@ export const GlobalState = (props) => {
 
 
 
-    return(
+    return (
         <GlobalStateContext.Provider value={{
-            moviesList, set_moviesList, 
-            movieDetails, set_movieDetails, 
-            movieCredits, set_movieCredits, 
+            moviesList, set_moviesList,
+            movieDetails, set_movieDetails,
+            movieCredits, set_movieCredits,
             actualPage, set_actualPage,
             movieVideos, set_movieVideos,
             movieRecomendedList, set_movieRecomendedList

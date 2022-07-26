@@ -1,6 +1,6 @@
 import axios from "axios"
 import { BASE_URL } from "../constants/constants"
-import {API_KEY} from "../constants/constants"
+import { API_KEY } from "../constants/constants"
 
 export const getPopularMovies = (set_data, page) => {
     const url = `${BASE_URL}popular?${API_KEY}&language=pt-BR&page=${page}`
@@ -43,8 +43,8 @@ export const getMovieVideos = (set_data, id) => {
 
     axios.get(url)
         .then((resp) => {
-            const trailer = resp.data.results.filter((video) =>{
-                if(video.type === "Trailer"){
+            const trailer = resp.data.results.filter((video) => {
+                if (video.type === "Trailer") {
                     return video
                 }
             })

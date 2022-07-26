@@ -15,7 +15,7 @@ export function useRequestData(initialState, endpoint) {
         }
     }
     useEffect(() => {
-        getData() 
-    },[endpoint])
+        getData()
+    }, [endpoint])
     return { data, getData }
 }
