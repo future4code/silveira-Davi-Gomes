@@ -1,8 +1,8 @@
-import { Header } from "../../components/Header.tsx"
+import { Header } from "../../components/Header.js"
 import { useRequestData } from "../../Hooks/useRequestData"
-import { MovieCardComponents } from "../../components/MovieCard.tsx"
+import { MovieCardComponents } from "../../components/MovieCard.js"
 import { useNavigate } from "react-router-dom"
-import { MovieGenreButtonComponents } from "../../components/MovieGenreButton.tsx"
+import { MovieGenreButtonComponents } from "../../components/MovieGenreButton.js"
 import { CardContainer, StyledCardHome, TextContainer, ContainerFiltro, BotoesFiltro } from "./Styled"
 // import { CompFooter } from "../../components/Footer/Footer"
 
@@ -27,7 +27,7 @@ export function HomePage() {
                     poster={movie.poster_path}
                     title={movie.title}
                     release_date={movie.release_date}
-                    Navigate={Navigate}
+                    // Navigate={Navigate}
                 />
             </CardContainer>
         )
