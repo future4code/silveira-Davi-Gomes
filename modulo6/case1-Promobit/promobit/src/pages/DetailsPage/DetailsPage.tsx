@@ -3,7 +3,7 @@ import { useRequestData } from "../../Hooks/useRequestData";
 
 import { BASE_URL_IMAGE } from "../../constants/constants";
 
-import { Header } from "../../components/Header.tsx";
+import { Header } from "../../components/Header.tsx"
 // import { CastCarousel } from "../components/MovieDetailsPage/CastCarousel";
 // import { Infos } from "../components/MovieDetailsPage/Infos";
 // import { ProductionCrew } from "../components/MovieDetailsPage/ProductionCrew";
