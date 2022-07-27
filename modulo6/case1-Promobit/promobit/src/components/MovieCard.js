@@ -11,11 +11,10 @@ export function MovieCardComponents({
     poster,
     title,
     release_date,
-    // navigate
 }) {
-    const convertDate = (releaseDate)=> {
+    const convertDate = (releaseDate) => {
         let [year, month, day] = releaseDate.split("-");
-        switch(month) {
+        switch (month) {
             case "01":
                 month = "JAN";
                 break;
@@ -28,13 +27,13 @@ export function MovieCardComponents({
             case "04":
                 month = "ABR";
                 break;
-                case "05":
+            case "05":
                 month = "MAI";
                 break;
-                case "06":
-                    month = "JUN";
+            case "06":
+                month = "JUN";
                 break;
-                case "07":
+            case "07":
                 month = "JUL";
                 break;
             case "08":
@@ -46,25 +45,25 @@ export function MovieCardComponents({
             case "10":
                 month = "OUT";
                 break;
-                case "11":
-                    month = "NOV";
+            case "11":
+                month = "NOV";
                 break;
             case "12":
                 month = "DEZ";
                 break;
-            };
+        };
 
-            return `${day} ${month} ${year}`;
+        return `${day} ${month} ${year}`;
     }
 
     const navigate = useNavigate()
 
     return (
-        <div className="flex flex-col w-64">
+        <div >
             <img
-            src={`${BASE_URL_IMAGE}${poster}`} 
-            alt={`${title} poster`}
-            onClick={ () => DetailsPage(navigate, id) }
+                src={`${BASE_URL_IMAGE}${poster}`}
+                alt={`${title} poster`}
+                onClick={() => DetailsPage(navigate, id)}
             />
 
             <p>{title}</p>

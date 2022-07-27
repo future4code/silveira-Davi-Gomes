@@ -44,26 +44,26 @@ export const Infos = ({
 
     return (
         <>
-            { certification &&
-            <div> 
-                <h2 >{ title } ({ certification.release_year })</h2>
+            {certification &&
+                <div>
+                    <h2 >{title} ({certification.release_year})</h2>
 
-                <p >
-                    { certification.country === "BR" && onlyNumbers(certification.classification) ? `${certification.classification} anos` : "Classificação indisponível" } • { certification.release_date } ({certification.country}) • { genresListToString !== "" ? genresListToString : "Desconhecido" } • { minToHours(runtime) }
-                </p>
+                    <p >
+                        {certification.country === "BR" && onlyNumbers(certification.classification) ? `${certification.classification} anos` : "Classificação indisponível"} • {certification.release_date} ({certification.country}) • {genresListToString !== "" ? genresListToString : "Desconhecido"} • {minToHours(runtime)}
+                    </p>
 
-                <div >
-                    {/* <img className="w-6" src={ ratingStarIcon } alt="Star" /> */}
+                    <div >
 
-                    <div>
-                        <span >{ vote_average.substring(0, 3) }</span>
-                        <span>/10</span>
+
+                        <div>
+                            <span >{vote_average.substring(0, 3)}</span>
+                            <span>/10</span>
+                        </div>
                     </div>
-                </div>
 
-                <p >Sinopse</p>
-                <p className={`mt-2 mb-8 ${!overview && `italic`}`}>{ overview ? overview : "Sinópse indisponível." }</p>
-            </div>
-        }</>
+                    <p >Sinopse</p>
+                    <p className={`mt-2 mb-8 ${!overview && `italic`}`}>{overview ? overview : "Sinópse indisponível."}</p>
+                </div>
+            }</>
     )
 }

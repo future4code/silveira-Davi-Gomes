@@ -1,8 +1,10 @@
 import styled from "styled-components"
 
-export const StyledRecomendations = styled.div`
+
+export const StyledRecomendations2 = styled.div`
+    
     display: flex;
-    margin: 2rem;
+    margin: 5rem;
     overflow-x: scroll;
     padding: 1em;
     min-height: 15rem;
@@ -21,7 +23,7 @@ export const StyledRecomendations = styled.div`
         font-size: 0.55em;
     }
     img{
-        width: 165px;
+        max-width: 165px;
         border-radius: 5px;
         box-shadow: 1px 1px 2px;
         transition: 0.3s;

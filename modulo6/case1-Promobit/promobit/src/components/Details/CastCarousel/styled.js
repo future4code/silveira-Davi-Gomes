@@ -1,8 +1,9 @@
 import styled from "styled-components"
 
 export const StyledRecomendations = styled.div`
+    
     display: flex;
-    margin: 2rem;
+    margin: 5rem;
     overflow-x: scroll;
     padding: 1em;
     min-height: 15rem;

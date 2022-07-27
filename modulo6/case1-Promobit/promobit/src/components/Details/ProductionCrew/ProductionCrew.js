@@ -1,3 +1,4 @@
+import { Elenco } from "./styled"
 
 
 
@@ -12,33 +13,34 @@ export const ProductionCrew = ({ crew }) => {
     }
 
     return (
-        <>{crewMembers &&
-            <div >
-                <div>
-                    <p>{crewMembers.producer ? `${crewMembers.producer.name}` : "Produtor desconhecido"}</p>
-                    <p>{crewMembers.producer?.job}</p>
-                </div>
+        <div>
+            {crewMembers &&
+                <Elenco>
 
-                <div>
-                    <p>{crewMembers.writer ? `${crewMembers.writer.name}` : "Roteirista desconhecido"}</p>
-                    <p>{crewMembers.writer?.job}</p>
-                </div>
+                    <a>{crewMembers.producer ? `${crewMembers.producer.name}` : "Produtor desconhecido"}</a>,
+                    <a>{crewMembers.producer?.job}</a>,
 
-                <div>
-                    <p>{crewMembers.director ? `${crewMembers.director.name}` : "Diretor desconhecido"}</p>
-                    <p>{crewMembers.director?.job}</p>
-                </div>
 
-                <div>
-                    <p>{crewMembers.designer ? `${crewMembers.designer.name}` : "Designer desconhecido"}</p>
-                    <p>{crewMembers.designer?.job}</p>
-                </div>
 
-                <div>
-                    <p>{crewMembers.sound ? `${crewMembers.sound.name}` : "Produtor de som desconhecido"}</p>
-                    <p>{crewMembers.sound?.job}</p>
-                </div>
-            </div>
-        }</>
+                    <a>{crewMembers.writer ? `${crewMembers.writer.name}` : "Roteirista desconhecido"}</a>,
+                    <a>{crewMembers.writer?.job}</a>,
+
+
+
+                    <a>{crewMembers.director ? `${crewMembers.director.name}` : "Diretor desconhecido"}</a>,
+                    <a>{crewMembers.director?.job}</a>,
+
+
+
+                    <a>{crewMembers.designer ? `${crewMembers.designer.name}` : "Designer desconhecido"}</a>,
+                    <a>{crewMembers.designer?.job}</a>,
+
+
+
+                    <a>{crewMembers.sound ? `${crewMembers.sound.name}` : "Produtor de som desconhecido"}</a>,
+                    <a>{crewMembers.sound?.job}</a>.
+
+                </Elenco>
+            }</div>
     )
 }

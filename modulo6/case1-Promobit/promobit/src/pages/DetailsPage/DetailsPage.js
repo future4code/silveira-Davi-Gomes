@@ -11,7 +11,7 @@ import { ProductionCrew } from "../../components/Details/ProductionCrew/Producti
 import { CastCarousel } from "../../components/Details/CastCarousel/CastCarousel";
 import { Trailer } from "../../components/Details/Trailer/Trailer";
 import { Recommendations } from "../../components/Details/Recommendations/Recommendations";
-import { ImagemContainer, StyledDetailsCard, StyledPageDetails, StyledTrailer } from "./styled";
+import { DescricaoContainer, Div, MainContainer } from "./styled";
 
 
 
@@ -33,15 +33,18 @@ export const MovieDetailsPage = () => {
 
     return (
         <div>
-
+            <Header />
             {details && production &&
                 <div>
-                    <Header />
-                            <ImagemContainer>
-                                <img
-                                    src={`${BASE_URL_IMAGE}${details.poster_path}`}
-                                    alt={`${details.title} poster`} />
-                            <div>
+                    <MainContainer>
+
+                        <img src={`${BASE_URL_IMAGE}${details.poster_path}`}
+                            alt={`${details.title} poster`} />
+                    </MainContainer>
+                    <DescricaoContainer>
+                        <h3>
+                            <div className="Sinopse">
+
                                 <Infos
                                     id={id}
                                     title={details.title}
@@ -49,27 +52,34 @@ export const MovieDetailsPage = () => {
                                     runtime={details.runtime}
                                     vote_average={details.vote_average.toString()}
                                     overview={details.overview}
-                                    />
+                                />
                             </div>
-                            <ProductionCrew crew={crew} />
-                        <p>
-                            Elenco original
-                        </p>
-                                    </ImagemContainer>
-                        <CastCarousel cast={cast} />
-                    
-                    
-                    <div>
+                        </h3>
 
-                        <p>
+
+                        <h3 className="elenco">
+                            Elenco original
+                        </h3>
+                        <h3 className="Producao">
+                            <ProductionCrew crew={crew} />
+
+                        </h3>
+                    </DescricaoContainer>
+
+                    <CastCarousel cast={cast} />
+
+
+                    <Div>
+
+                        <h2>
                             Trailer
-                        </p>
+                        </h2>
                         <Trailer id={id} />
-                        <p>
+                        <h2>
                             Recomendações
-                        </p>
-                        <Recommendations id={id} />
-                    </div>
+                        </h2>
+                    </Div>
+                    <Recommendations id={id} />
 
 
                 </div>}

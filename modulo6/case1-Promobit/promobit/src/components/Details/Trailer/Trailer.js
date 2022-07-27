@@ -1,4 +1,5 @@
 import { useRequestData } from "../../../Hooks/useRequestData"
+import { TrailerContainer } from "./styled";
 
 
 
@@ -13,14 +14,14 @@ export const Trailer = ({ id }) => {
     })[0]
 
     return (
-        <div>
+        <TrailerContainer>
             {trailer_key ?
-            <iframe width="907" height="510" src={`https://www.youtube.com/embed/${trailer_key}`}
-                title="YouTube video player"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-                
-            /> :
-            <p>Trailer indisponível</p>
-        }</div>
+                <iframe width="907" height="510" src={`https://www.youtube.com/embed/${trailer_key}`}
+                    title="YouTube video player"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+
+                /> :
+                <p>Trailer indisponível</p>
+            }</TrailerContainer>
     )
 }

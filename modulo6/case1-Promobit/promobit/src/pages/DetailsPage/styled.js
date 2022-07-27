@@ -110,8 +110,71 @@ export const StyledTrailer = styled.div`
             height: 215px;
         }
     }
-` 
-export const ImagemContainer = styled.div`
-background: blue;
+`
+export const MainContainer = styled.div`
 
+img{
+    position: absolute;
+    width: 383px;
+    Height:574px;
+    Top:128px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px;
+    margin-left:112px;
+}
+`
+
+export const DescricaoContainer = styled.div`
+/* background: blue;
+height: 600px;
+width: 1440px;
+
+
+
+justify-items: end;
+justify-content: space-around;  */
+display: grid;
+
+
+
+
+justify-items: center;
+width: 100%;
+height: 600px;
+left: 0px;
+top: 56px;
+
+background: #2D0C5E;
+
+p{
+    
+
+width: 400px;
+    
+}
+.Sinopse{
+    font-size: 16px;
+color:#FFFFFF;
+   
+}
+
+.Producao{
+color:#FFFFFF;
+    
+    width: 590px;
+height: 111px;
+font-size: 16px;
+display: flex;
+flex-direction: row-reverse;
+}
+.elenco{
+color:#FFFFFF;
+
+}
+
+`
+
+export const Div = styled.div`
+
+margin-left:90px ;
 `

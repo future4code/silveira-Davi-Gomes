@@ -4,7 +4,7 @@ import { HomePage } from "../pages/HomePage/HomePage";
 import { MovieDetailsPage } from "../pages/DetailsPage/DetailsPage.js"
 
 
- const Router = () => {
+const Router = () => {
     return (
         <BrowserRouter>
             <Routes>

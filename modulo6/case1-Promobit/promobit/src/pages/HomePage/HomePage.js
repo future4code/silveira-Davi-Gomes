@@ -27,7 +27,7 @@ export function HomePage() {
                     poster={movie.poster_path}
                     title={movie.title}
                     release_date={movie.release_date}
-                    // Navigate={Navigate}
+                // Navigate={Navigate}
                 />
             </CardContainer>
         )

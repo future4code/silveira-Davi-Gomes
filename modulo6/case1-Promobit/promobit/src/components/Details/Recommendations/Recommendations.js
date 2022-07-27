@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom"
+import { BASE_URL_IMAGE } from "../../../constants/constants";
 
 import { useRequestData } from "../../../Hooks/useRequestData"
 
 
-import { MovieCardComponents } from "../../MovieCard"
-import { StyledRecomendations } from "./styled";
+// import { MovieCardComponents } from "../../MovieCard"
+import { StyledRecomendations2 } from "./styled";
 
 
 
@@ -15,24 +16,26 @@ export const Recommendations = ({ id }) => {
     const recommendationsList = recommendations.data.data && recommendations.data.data.results
 
     return (
-        <StyledRecomendations>
+        <div>
             {recommendationsList &&
-            <div>
-                {recommendationsList.filter((movie) => {
-                    return movie.poster_path !== null
-                }).map((movie) => {
-                    return (
-                        <MovieCardComponents key={movie.id}
-                            id={movie.id}
-                            poster_path={movie.poster_path}
-                            title={movie.title}
-                            release_date={movie.release_date}
-                            navigate={navigate}
-                        />
-                    )
-                }).slice(0, 5)}
+                <StyledRecomendations2>
+                    {recommendationsList.filter((movie) => {
+                        return movie.poster_path !== null
+                    }).map((movie) => {
+                        return (
+                            <div>
+                                <div key={movie.id}
+                                    id={movie.id}
+                                    title={movie.title}
+                                    release_date={movie.release_date}
+                                    navigate={navigate}
+                                />
+                                <img src={`${BASE_URL_IMAGE}${movie.poster_path}`} />
+                            </div>
+                        )
+                    }).slice()}
 
-            </div>
-        }</StyledRecomendations>
+                </StyledRecomendations2>
+            }</div>
     )
 }
