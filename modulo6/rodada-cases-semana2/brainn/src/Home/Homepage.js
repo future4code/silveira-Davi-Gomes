@@ -1,17 +1,15 @@
-import React from 'react'
-// import { Divider, PageContent } from "../../assets/styles/HomePage/HomeStyle";
-// import LoteryArea from "../../components/LoteryArea/LoteryArea";
-// import SortingNumber from "../../components/SortingNumber/SortingNumber";
+import { Divider, PageContent } from "./style"
+import LoteryArea from "../components/LoteryArea/loteryArea"
+import SortingNumber from "../components/SortingNumber/SortingNumber"
 
 
 const HomePage = () => {
     return (
-        <div>
-            <h1>Home</h1>
-            {/* <LoteryArea/>
+        <PageContent>
+            <LoteryArea/>
             <Divider/>
-        <SortingNumber/> */}
-        </div>
+            <SortingNumber />
+        </PageContent>
     )
 }
 

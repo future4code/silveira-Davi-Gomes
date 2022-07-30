@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { BASE_URL } from '../constants/BaseUrl'
 import { getLotteriesResults } from "../services/getLotteriesResults"
 import useRequestData from "../Hooks/useRequestData"
