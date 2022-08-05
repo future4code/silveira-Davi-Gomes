@@ -18,7 +18,7 @@ eu sou o header
             </div>
             {/* Main */}
             <div>
-eu sou a main
+eu sou a main.
 <UserCard/>
 <UserRepositories/>
             </div>
