@@ -9,6 +9,7 @@ export interface participationDTO {
 }
 
 export interface updateDTO {
+    id: string,
     firstName: string,
     lastName: string
     participation: number

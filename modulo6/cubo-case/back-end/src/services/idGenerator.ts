@@ -1,5 +1,5 @@
-import { v4} from "uuid";
+import { v4 } from "uuid";
 
-export class IdGenerator{
+export class IdGenerator {
     public generateId = (): string => v4();
 }

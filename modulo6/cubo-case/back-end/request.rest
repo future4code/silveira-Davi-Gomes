@@ -9,25 +9,26 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3003/select
+GET http://localhost:3003/participation/select
 
 ###
 
-PUT http://localhost:3003/update
+PUT http://localhost:3003/participation/update
 Content-Type: application/json
 
 {
-    "first_name": "Davi",
-    "last_name": "Araujo",
+    "id":"7d4e7134-37b8-427b-83ce-94435469431d",
+    "firstName": "Davi",
+    "lastName": "Araujo",
     "participation": 95
 }
 
 ###
 
-DELETE http://localhost:3003/delete
-Content-Type: application/application/json
+DELETE http://localhost:3003/participation/delete
+Content-Type: application/json
 
 {
-    "first_name": "",
-    "last_name": ""
+    "firstName": "Davi",
+    "lastName": "Araujo"
 }
