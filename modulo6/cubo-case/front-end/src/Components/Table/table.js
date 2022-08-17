@@ -6,8 +6,8 @@ import { Message } from "../Message/Message"
 const Table = () => {
     const globalState = useContext(ParticipationContext)
 
-    const twoFunctionsCall = (fristName, lastName) => {
-        globalState.editTableDataFn(fristName,lastName)
+    const twoFunctionsCall = (firstName, lastName) => {
+        globalState.editTableDataFn(firstName,lastName)
         globalState.showEditFn()
     }
 
@@ -26,9 +26,9 @@ const Table = () => {
                 <tbody>
                     {globalState.list && globalState.list.map(people => {
                         return(
-                            <tr key={people.id} onDoubleClick={() => twoFunctionsCall(people.fristName,people.lastName)}>
+                            <tr key={people.id} onDoubleClick={() => twoFunctionsCall(people.firstName,people.lastName)}>
                                 <Celula>{people.id}</Celula>
-                                <CelulaTd>{people.fristName}</CelulaTd>
+                                <CelulaTd>{people.firstName}</CelulaTd>
                                 <CelulaTd>{people.lastName}</CelulaTd>
                                 <Celula>{people.participation}%</Celula>
                             </tr>

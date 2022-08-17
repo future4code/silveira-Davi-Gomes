@@ -27,10 +27,11 @@ export class ParticipationData extends BaseDataBase {
     }
 
     update = async (inputs: updateDTO): Promise<void> => {
+        console.log(inputs)
         try {
             await BaseDataBase.connection('cubo_graph_data')
                 .update({ participation: inputs.participation, firstName: inputs.firstName, lastName: inputs.lastName })
-                .where({ id: inputs.id })
+                .where({ firstName: inputs.firstName, lastName: inputs.lastName  })
         } catch (error: any) {
             throw new Error(error.sqlMessage || error.message)
         }

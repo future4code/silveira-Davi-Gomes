@@ -29,6 +29,7 @@ export class ParticipationController {
     }
 
     update = async (req: Request, res: Response): Promise<void> => {
+        
         const { id, firstName, lastName, participation } = req.body
         try {
             const inputs: updateDTO = { id, firstName, lastName, participation }

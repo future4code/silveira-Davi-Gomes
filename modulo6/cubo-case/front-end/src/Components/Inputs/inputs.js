@@ -5,7 +5,7 @@ import * as s from "./style";
 
 const Inputs = () => {
     const globalState = useContext(ParticipationContext)
-    const {form, onChange, clearFields} = useForm({fristName: '', lastName: '', participation: ''})
+    const {form, onChange, clearFields} = useForm({firstName: '', lastName: '', participation: ''})
 
     const preventDefaultFunction = (event) => {
         event.preventDefault()
@@ -18,8 +18,8 @@ const Inputs = () => {
             <s.Form onSubmit={preventDefaultFunction}>
 
             <s.Inputs
-            name="fristName"
-            value={form.fristName}
+            name="firstName"
+            value={form.firstName}
             onChange={onChange}
             placeholder="Nome"
             required/>
