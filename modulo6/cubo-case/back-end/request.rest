@@ -1,0 +1,34 @@
+POST http://localhost:3003/Participation/insert
+Content-Type: application/json
+
+{
+    "firstName": "Ronaldo",
+    "lastName": "andrade",
+    "participation": "45"
+}
+
+###
+
+GET http://localhost:3003/participation/select
+
+###
+
+PUT http://localhost:3003/participation/update
+Content-Type: application/json
+
+{
+    "id":"1b8b5270-92fd-4c73-84af-ca1c74eba46f",
+    "firstName": "Davi",
+    "lastName": "Araujo",
+    "participation": 95
+}
+
+###
+
+DELETE http://localhost:3003/participation/delete
+Content-Type: application/json
+
+{
+    "firstName": "Davi",
+    "lastName": "Araujo"
+}
