@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const Container =styled.div`
     width: 100%;
-    height: 100px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -27,11 +26,11 @@ padding:5px;
 `
 
 export const Description = styled.p`
-width: 300%;
+width:100%;
 height: 30px;
 margin:10px 0;
 font-size: 12px;
-text-align: justify;
+text-align:center;
 color: red;
 line-height: 1.3;
 overflow: hidden;
