@@ -8,7 +8,10 @@ export const HeaderSection = styled.header`
     display: flex;
     flex-direction: column;
     padding: 0;
-`
+    @media (max-width:430px){
+        width: 300px;
+    }
+    `
 
 export const HeaderTitle = styled.h1`
     margin: 0;
@@ -18,14 +21,32 @@ export const HeaderTitle = styled.h1`
     font-weight: 700;
     text-align: center;
     width: 100%;
-`
+    `
 
 export const HeaderInputContainer = styled.div`
     padding: 10px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-`
+    a {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        border: none;
+        background: #FF7A00;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        transition: ease .3s;
+        &:hover {
+            transform: scale(1.05);
+            transition: ease .3s;
+            cursor: pointer;
+        }
+    }
+    `
 
 export const HeaderInput = styled.input`
     width: 200px;
@@ -40,7 +61,7 @@ export const HeaderInput = styled.input`
         width: 220px;
         transition: .4s ease;
     }
-`
+    `
 
 export const HeaderSearchButton = styled.button`
     width: 30px;
@@ -59,4 +80,4 @@ export const HeaderSearchButton = styled.button`
         transition: ease .3s;
         cursor: pointer;
     }
-`
+    `

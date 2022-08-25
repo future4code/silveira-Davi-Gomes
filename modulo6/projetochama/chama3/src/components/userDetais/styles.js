@@ -11,7 +11,7 @@ width: 100%;
 text-align: center;
 font-size: 20px;
 font-weight: 700;
-color: aqua;
+color: #0d1117;
 
 `
 
@@ -20,7 +20,7 @@ width: 100%;
 text-align: center;
 font-size:13px;
 font-weight: 500;
-color: red;
+color: #3d4145;
 padding:5px;
 
 `
@@ -31,11 +31,11 @@ height: 30px;
 margin:10px 0;
 font-size: 12px;
 text-align:center;
-color: red;
+color: #3d4145;
 line-height: 1.3;
 overflow: hidden;
 
-@media (max-width:400px){
+@media (max-width:430px){
     width: 250px;
 }
 `

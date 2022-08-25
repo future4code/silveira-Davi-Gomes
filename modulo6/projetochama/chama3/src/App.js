@@ -1,11 +1,11 @@
 import { Router } from "./router/Router";
-
+import {ContextProvider} from "./context/index"
 
 function App() {
   return (
-  <div>
+  <ContextProvider>
     <Router/>
-  </div>
+  </ContextProvider>
   );
 }
 
