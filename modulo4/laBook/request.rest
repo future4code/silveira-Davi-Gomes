@@ -1,0 +1,39 @@
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+"name": "davi",
+"email": "davi@email.com",
+"password": "12345678"
+}
+
+###
+
+# @name login
+
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+	"email": "davi@email.com",
+	"password": "12345678"
+}
+
+### 
+
+@token = {{login.response.body.token}}
+
+###
+
+POST http://localhost:3003/post
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+   	"photo": "https://www.pexels.com/pt-br/foto/arara-vermelha-de-perto-12568038/",
+	"description": "arara vermelha",
+	"type": "NORMAL"
+}
+
+###
+GET http://localhost:3003/postById/be57f50f-6453-41f2-89b4-96f343882c90
